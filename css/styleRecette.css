@@ -1,0 +1,194 @@
+:root {
+    font-size: 10px;
+    --primary-color: #E67F22;
+    --secondary-color: #F9F9F9;
+    --tertiary-color: #2DCD73;
+    --quaternary-color: #4293D2;
+    --dark-color: #111;
+    --light-color: #FFFFFF;
+    --font-primary: #767B7F;
+    --border-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075), 0 -0.125rem 0.25rem rgba(0, 0, 0, 0.075), 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075), -0.125rem 0 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+* {
+    margin: 0px;
+    padding: 0;
+    box-sizing: border-box;
+}
+.show{
+    display: flex;
+}
+
+header {
+    margin-inline: 5px;
+    padding-inline: 20px;
+    display: flex;
+    justify-content: space-between;
+    padding-block: 10px;
+    margin-bottom: 30px;
+    position: relative;
+
+    box-shadow: var(--border-shadow);
+    
+    >div {
+        display: flex;
+        gap: 15px;
+
+        div {
+            width: 40px;
+            height: 40px;
+            border-radius: 100%;
+            justify-items: center;
+            align-content: center;
+        }
+
+        &:first-of-type {
+
+            div {
+                background-color: var(--primary-color);
+
+                p {
+                    color: var(--light-color);
+                    font-weight: 900;
+                    font-size: 1.6rem;
+                }
+            }
+        }
+
+        &:last-of-type {
+            div {
+                background-color: var(--secondary-color);
+                text-align: center;
+            }
+        }
+    }
+
+    >img {
+        width: 30px;
+        aspect-ratio: 1/1;
+    }
+
+    h1 {
+        color: var(--primary-color);
+        font-weight: 900;
+        font-size: 3rem;
+        margin: 0;
+
+    }
+    
+    nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: var(--primary-color);
+        border-top: none;
+        ul {
+            width: 40vw;
+            padding-block: 10px;
+            padding-left: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+
+            li {
+                list-style: none;
+                a {
+                    text-decoration: none;
+                    color: var(--light-color);
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+}
+
+
+footer {
+    >div {
+        padding-bottom: 10px;
+        padding-inline: 10px;
+        box-shadow: var(--border-shadow);
+        margin-inline: 5px;
+        border-radius: 10px;
+
+        h3 {
+            color: var(--primary-color);
+            padding-block: 5px;
+
+            a {
+                color: var(--primary-color);
+                text-decoration: none;
+            }
+        }
+
+        li {
+            list-style-type: none;
+            padding-block: 4px;
+
+            a {
+                color: #111;
+                text-decoration: none;
+            }
+        }
+
+    }
+
+    >p {
+        text-align: center;
+        padding-block: 10px;
+    }
+}
+
+@media (min-width: 768px) {
+   
+    footer {
+        >div {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+}
+
+@media(min-width: 1024px) {
+    header{
+        >div {
+            &:first-of-type{
+                flex: 1;
+            }
+            &:last-of-type{
+                justify-content: space-between;
+                flex: 1.6;
+            }
+            >img{
+            display: none;
+            }
+        }
+        nav{
+            background-color: var(--light-color);
+            
+            display: flex;
+            position: relative;
+            top: 0;
+            ul{
+            flex-direction: row;
+            justify-content: space-between;
+            padding-inline: 10px;
+            li {
+                
+            a{
+                color: var(--dark-color);
+                font-weight: 800;
+            }
+            &:hover{
+                padding: 4px;
+                background-color: var(--secondary-color);
+                a{color: var(--primary-color);}
+            }
+        }
+            }
+        }
+    }
+   
+}

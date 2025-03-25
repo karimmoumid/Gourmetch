@@ -15,6 +15,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+.show{
+    display: flex;
+}
 
 header {
     margin-inline: 5px;
@@ -23,9 +26,10 @@ header {
     justify-content: space-between;
     padding-block: 10px;
     margin-bottom: 30px;
+    position: relative;
 
     box-shadow: var(--border-shadow);
-
+    
     >div {
         display: flex;
         gap: 15px;
@@ -70,6 +74,33 @@ header {
         font-size: 3rem;
         margin: 0;
 
+    }
+    
+    nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: var(--primary-color);
+        border-top: none;
+        ul {
+            width: 40vw;
+            padding-block: 10px;
+            padding-left: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+
+            li {
+                list-style: none;
+                a {
+                    text-decoration: none;
+                    color: var(--light-color);
+                    font-size: 1.2rem;
+                }
+            }
+        }
     }
 }
 
@@ -125,7 +156,7 @@ header {
 
     article {
         position: relative;
-margin-bottom: 10px;
+        margin-bottom: 10px;
         box-shadow: var(--border-shadow);
         margin-inline: 5px;
         border-radius: 10px;
@@ -233,44 +264,108 @@ footer {
         padding-block: 10px;
     }
 }
+
 @media (min-width: 768px) {
-#filtre{
-    form{
-display: flex;
-input{
-    flex: 1;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-    border-right: 0;
-}
-button{
-    flex: 0.3;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-}
-}
-article{
-    h3{
-        margin-block: 5px;
+    #filtre {
+        form {
+            display: flex;
+
+            input {
+                flex: 1;
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
+                border-right: 0;
+            }
+
+            button {
+                flex: 0.3;
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+            }
+        }
+
+        article {
+            h3 {
+                margin-block: 5px;
+            }
+
+            ul {
+                display: flex;
+                gap: 15px;
+            }
+        }
     }
-    ul{
-        display: flex;
-        gap: 15px;
+
+    #recette {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    footer {
+        >div {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
     }
 }
-    }
-#recette{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-}
-
-}
-
-
-
-
 
 @media(min-width: 1024px) {
- 
+    header{
+        >div {
+            &:first-of-type{
+                flex: 1;
+            }
+            &:last-of-type{
+                justify-content: space-between;
+                flex: 1.6;
+            }
+            >img{
+            display: none;
+            }
+        }
+        nav{
+            background-color: var(--light-color);
+            
+            display: flex;
+            position: relative;
+            top: 0;
+            ul{
+            flex-direction: row;
+            justify-content: space-between;
+            padding-inline: 10px;
+            li {
+                
+            a{
+                color: var(--dark-color);
+                font-weight: 800;
+            }
+            &:hover{
+                padding: 4px;
+                background-color: var(--secondary-color);
+                a{color: var(--primary-color);}
+            }
+        }
+            }
+        }
+    }
+    #filtre {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 10px;
+        form {
+            grid-column: 1 / -1;
+        }
+
+        article {
+            ul {
+                flex-direction: column;
+                gap: 4px;
+                
+            }
+        }
+    }
+    #recette{
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
