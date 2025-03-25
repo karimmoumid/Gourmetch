@@ -5,45 +5,97 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GourmeTech</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <header>
         <div>
-            <p>
-                G
-            </p>
+            <div>
+                <p>
+                    G
+                </p>
+            </div>
+            <h1>GourmeTech</h1>
         </div>
-        <h1>GourmeTech</h1>
-        <img src="assets/icons/Vector (1).png" alt="Boutton pour changer de theme" role="button">
-        <img src="assets/icons/Vector (2).png" alt="Boutton burger" role="button">
+        <div>
+            <div><img src="assets/icons/Vector (1).png" alt="icon pour changer de theme" role="button"></div>
+            <img src="assets/icons/Vector (2).png" alt="icon burger" role="button">
+        </div>
     </header>
     <main>
         <section id="filtre">
             <form action="">
-                <input type="text" placeholder="Rechercher une recette...">
+                <input type="text" placeholder="Rechercher une recette..." aria-label="Rechercher une recette">
                 <button>Rechercher</button>
             </form>
             <article>
-                <h3></h3>
+                <h3>Catégorie</h3>
                 <ul>
-                    <li><input type="checkbox" name="entree" id="entree"> <label for="entree">Entrée</label></li>
-                    <li><input type="checkbox" name="plat" id="plat"> <label for="plat">Plat</label></li>
-                    <li><input type="checkbox" name="dessert" id="dessert"> <label for="dessert">Dessert</label></li>
+                    <li><input type="checkbox" name="entree" id="entree" aria-label="entrée"> <label
+                            for="entree">Entrée</label></li>
+                    <li><input type="checkbox" name="plat" id="plat"> <label for="plat" aria-label="plat">Plat</label>
+                    </li>
+                    <li><input type="checkbox" name="dessert" id="dessert" aria-label="dessert"> <label
+                            for="dessert">Dessert</label></li>
                 </ul>
             </article>
             <article>
-                <h3></h3>
+                <h3>Temps</h3>
                 <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <li><input type="checkbox" name="rapide" id="rapide" aria-label="rapide"> <label
+                            for="rapide">Rapide</label></li>
+                    <li><input type="checkbox" name="moyen" id="moyen" aria-label="moyen"> <label
+                            for="moyen">Moyen</label></li>
+                    <li><input type="checkbox" name="long" id="long"> <label for="long" aria-label="long">Long</label>
+                    </li>
                 </ul>
+            </article>
+            <article>
+                <h3>Difficulté</h3>
+                <ul>
+                    <li><input type="checkbox" name="facile" id="facile" aria-label="facile"> <label
+                            for="facile">Facile</label></li>
+                    <li><input type="checkbox" name="dmoyen" id="dmoyen"> <label for="dmoyen"
+                            aria-label="moyen">Moyen</label></li>
+                    <li><input type="checkbox" name="difficile" id="difficile" aria-label="difficile"> <label
+                            for="difficile">Difficile</label>
+                    </li>
+                </ul>
+            </article>
+        </section>
+        <section id="recette">
+            <article>
+                <figure>
+                    <img src="assets/images/diliara-garifullina-D7X-GMeTV7U-unsplash.jpg" alt="tarte aux pommes">
+                    <figcaption>Tarte aux pommes</figcaption>
+                </figure>
+                <div>
+                    <p>Dessert</p>
+                    <p>6O min</p>
+                    <p>Facile</p>
+                </div>
+                <button role="button">Voir recette</button>
             </article>
         </section>
     </main>
     <footer>
-
+        <nav role="navigation">
+            <h3>Navigation</h3>
+            <ul>
+                <li><a href="">Accueil</a></li>
+                <li><a href="">Ajouter une recette</a></li>
+                <li><a href="">Mes favoris</a></li>
+                <li><a href="">A propos</a></li>
+            </ul>
+            <div>
+                <h3><a href="">A propos de GourmeTech</a></h3>
+                <p>GourmeTech est une plateforme de recettes culinaires interactive développée dans le cadre d'un projet
+                    pédagogique</p>
+            </div>
+        </nav>
+        <p>©2025 GourmeTech - Tous droits réservés</p>
     </footer>
 </body>
 
