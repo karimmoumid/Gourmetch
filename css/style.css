@@ -121,44 +121,70 @@ header {
 }
 
 #recette {
+    margin-bottom: 20px;
+
     article {
+        position: relative;
+margin-bottom: 10px;
         box-shadow: var(--border-shadow);
         margin-inline: 5px;
-border-radius: 10px;
-        img {
-            width: 100%;
-            aspect-ratio: 1.5/1;
-            object-fit: cover;
-            object-position: 50% 75%;
-            border-top-left-radius: 10px;
-            border-top-right-radius:10px;
+        border-radius: 10px;
+
+        figure {
+            img {
+                width: 100%;
+                aspect-ratio: 1.5/1;
+                object-fit: cover;
+                object-position: 50% 75%;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+            }
+
+            figcaption {
+                padding-left: 20px;
+                font-size: 2rem;
+            }
         }
-        figcaption{
-            padding-left: 20px;
-            font-size: 2rem;
-        }
-        div{
-            padding-left: 20px;
-            display: flex;
-            gap: 10px;
-            margin-block: 10px;
-            p{
-                padding: 5px;
-                padding-inline: 9px;
-                color: var(--light-color);
-                border-radius: 15px;
-                &:first-of-type{
-                    background-color: var(--primary-color);
-                }
-                &:nth-last-of-type(2){
-                    background-color: var(--tertiary-color);
-                }
-                &:last-of-type{
-                    background-color: var(--quaternary-color);
+
+        div {
+            &:first-of-type {
+                background-color: var(--secondary-color);
+                padding: 10px;
+                position: absolute;
+                top: 10%;
+                right: 0%;
+                transform: translate(-50%, -50%);
+                border-radius: 100%;
+            }
+
+            &:last-of-type {
+                padding-left: 20px;
+                display: flex;
+                gap: 10px;
+                margin-block: 10px;
+
+                p {
+                    padding: 5px;
+                    padding-inline: 9px;
+                    color: var(--light-color);
+                    border-radius: 15px;
+
+                    &:first-of-type {
+                        background-color: var(--primary-color);
+                    }
+
+                    &:nth-last-of-type(2) {
+                        background-color: var(--tertiary-color);
+                    }
+
+                    &:last-of-type {
+                        background-color: var(--quaternary-color);
+                    }
                 }
             }
         }
-        button{
+
+        button {
             margin-inline: 20px;
             width: calc(100% - 40px);
             background-color: var(--primary-color);
@@ -170,4 +196,81 @@ border-radius: 10px;
             border-radius: 5px;
         }
     }
+}
+
+footer {
+    >div {
+        padding-bottom: 10px;
+        padding-inline: 10px;
+        box-shadow: var(--border-shadow);
+        margin-inline: 5px;
+        border-radius: 10px;
+
+        h3 {
+            color: var(--primary-color);
+            padding-block: 5px;
+
+            a {
+                color: var(--primary-color);
+                text-decoration: none;
+            }
+        }
+
+        li {
+            list-style-type: none;
+            padding-block: 4px;
+
+            a {
+                color: #111;
+                text-decoration: none;
+            }
+        }
+
+    }
+
+    >p {
+        text-align: center;
+        padding-block: 10px;
+    }
+}
+@media (min-width: 768px) {
+#filtre{
+    form{
+display: flex;
+input{
+    flex: 1;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-right: 0;
+}
+button{
+    flex: 0.3;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+}
+article{
+    h3{
+        margin-block: 5px;
+    }
+    ul{
+        display: flex;
+        gap: 15px;
+    }
+}
+    }
+#recette{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+}
+
+
+
+
+
+@media(min-width: 1024px) {
+ 
 }
