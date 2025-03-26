@@ -131,18 +131,36 @@ h2{
     margin-bottom: 10px;
 }
     form {
+
         display: flex;
         flex-direction: column;
         gap: 10px;
+        .invalid-feedback{
+            color: red;
+            display: none;
+        }
         div{
             display: flex;
             flex-direction: column;
-            input,textarea{
+            input:not([type=checkbox]), textarea{
                 padding: 10px;
         border-radius: 5px;
         border: 1px solid var(--dark-color);
         gap: 10px;
+        &.is-invalid{
+            ~ .invalid-feedback{
+                display: initial;
+            }
+            
+        }
             } 
+        }
+        >div:last-of-type{
+                    >div:last-of-type{
+                        color: red;
+                    }
+                }
+            }
         }
         
         button{
@@ -156,8 +174,6 @@ h2{
         background-color: var(--quaternary-color);
     }
         }
-    }
-}
 #faq {
     margin-inline: 5px;
     padding-inline: 20px;

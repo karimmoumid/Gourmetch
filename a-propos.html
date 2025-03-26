@@ -46,18 +46,35 @@
             <h2>Contact</h2>
             <form id="contact-form">
                 <div>
-                    <label for="name">Nom :</label>
-                    <input type="text" id="name" name="name" required aria-label="saisissez votre nom">
+                    <label for="nickname">Nom :</label>
+                    <input type="text" id="nickname" name="nickname" required aria-label="saisissez votre nom">
+                    <div class="invalid-feedback">
+                        Votre Nom doit faire au moins 5 caractères
+                    </div>
                 </div>
                 <div>
                     <label for="email">Email :</label>
                     <input type="email" id="email" name="email" required aria-label="saisissez votre email">
+                    <div class="invalid-feedback">
+                        Ceci n'est pas une adresse e-mail
+                    </div>
                 </div>
                 <div>
                     <label for="message">Message :</label>
                     <textarea id="message" name="message" required aria-label="saisissez votre message"></textarea>
+                    <div class="invalid-feedback">
+                        Votre message doit faire au moins 50 caractères
+                    </div>
                 </div>
-                <button type="submit" role="button" aria-label="appuyer pour envoyer le formulaire">Envoyer</button>
+                <div>
+                    <input type="checkbox" name="rgpd" id="rgpd">
+                    <label for="rgpd">En cliquant sur le bouton "M'inscrire", j'accepte la collecte de mes données
+                        personnelles...</label>
+                    <div class="invalid-feedback">
+                        La case doit être cochée
+                    </div>
+                </div>
+                <button type="submit" role="button" disabled aria-label="appuyer pour envoyer le formulaire">Envoyer</button>
             </form>
         </section>
         <section id="faq">
