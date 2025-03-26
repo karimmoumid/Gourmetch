@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styleApropos.css">
     <script src="js/scriptsapropos.js" defer></script>
+    <script src="js/navscript.js" defer></script>
 </head>
 
 <body>
@@ -30,7 +31,7 @@
                 </ul>
             </nav>
             <div><img src="assets/icons/Vector (1).png" alt="icon pour changer de theme" role="button"></div>
-            <img src="assets/icons/Vector (2).png" alt="icon burger" role="button">
+            <img src="assets/icons/Vector (2).png" alt="icon burger" role="button" id="burger">
         </div>
     </header>
     <main>
@@ -74,7 +75,8 @@
                         La case doit être cochée
                     </div>
                 </div>
-                <button type="submit" role="button" disabled aria-label="appuyer pour envoyer le formulaire">Envoyer</button>
+                <button role="button" type="submit" id="submitbutton" 
+                    aria-label="appuyer pour envoyer le formulaire">Envoyer</button>
             </form>
         </section>
         <section id="faq">

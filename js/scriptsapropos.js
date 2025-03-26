@@ -3,21 +3,20 @@ const nickname = document.querySelector("#nickname");
 const email = document.querySelector("#email");
 const rgpd = document.querySelector("#rgpd");
 const message = document.querySelector("textarea")
-const button = document.querySelector("form button");
+const form = document.querySelector("section #contact-form");
 
-function validateform() {
-    const nicknameValidate = nickname.value.length > 5;
-    const emailValidate = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/.test(email.value);
-    const messageValidate = nickname.value.length > 50;
-    const rgpdValidate = rgpd.checked;
-    if (nicknameValidate && emailValidate && messageValidate && rgpdValidate) {
-        button.removeAttribute("disabled")
-    } else {
-        button.setAttribute("disabled", "true");
-    }
 
+let nicknameValid = false;
+let emailValid = false;
+let messageValid = false;
+let rgpdValid = false;
+
+
+
+function formulaireValid() {
+    let validation= !(nicknameValid && emailValid && messageValid );
+    return !validation;
 }
-
 
 
 
@@ -32,45 +31,65 @@ for(let question of questions){
 
 
 
-nickname.addEventListener("change", function () {
+    nickname.addEventListener("change", function () {
+        if (nickname.value.length >= 5) {
+            this.classList.remove("is-invalid");
+            nicknameValid = true;
+    
+        } else {
+            this.classList.add("is-invalid");
+            nicknameValid = false;
+        }
+        formulaireValid();
+    })
 
-    if (this.value.length >= 5 ) {
-        this.classList.remove("is-invalid");
-    }
-    else {
-        this.classList.add("is-invalid");
-    }
-    validateform();
-});
 message.addEventListener("change", function () {
 
     if (this.value.length >= 50 ) {
         this.classList.remove("is-invalid");
+        emailValid =true;
     }
     else {
         this.classList.add("is-invalid");
+        emailValid=false;
     }
-    validateform();
+    formulaireValid();
 }
 
 );
 email.addEventListener("change", function () {
-    const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-    if (regex.test(this.value)) {
+    const mail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (mail.test(email.value)) {
         this.classList.remove("is-invalid");
+        emailValid = true;
     } else {
         this.classList.add("is-invalid");
+        emailValid = false;
     }
-    validateform();
-}
-);
+    formulaireValid();
+});
 
 rgpd.addEventListener("change", function () {
+    
     if (!this.checked) {
         this.nextElementSibling.nextElementSibling.classList.remove("invalid-feedback");
+        rgpdValid = true;
     }
     else {
         this.nextElementSibling.nextElementSibling.classList.add("invalid-feedback");
+        rgpdValid = false;
     }
-    validateform();
-});
+    formulaireValid();
+})
+form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    if (formulaireValid()) {
+        alert("le formulaire est valide.")
+    } else {
+        const evenement = new Event("change");
+        nickname.dispatchEvent(evenement);
+        email.dispatchEvent(evenement);
+        rgpd.dispatchEvent(evenement);
+    }
+}) 

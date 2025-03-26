@@ -61,13 +61,14 @@ header {
                 background-color: var(--secondary-color);
                 text-align: center;
             }
+            >img{
+                width: 40px;
+                aspect-ratio: 1/1;
+                cursor: pointer;
+            }
         }
     }
 
-    >img {
-        width: 30px;
-        aspect-ratio: 1/1;
-    }
 
     h1 {
         color: var(--primary-color);
@@ -160,20 +161,34 @@ h2{
                         color: red;
                     }
                 }
-            }
+                
+>div:last-of-type{
+    flex-direction: row;
+    gap: 10px;
+    flex-wrap: wrap;
+    input{
+        flex-basis: 4%;}
+        label{
+            flex-basis: 90%;
         }
-        
-        button{
-            padding: 10px;
-    background-color: var(--primary-color);
-    color: var(--light-color);
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    &:hover{
-        background-color: var(--quaternary-color);
     }
+}
+
+            }
+
+            button{
+                padding: 10px;
+        background-color: var(--primary-color);
+        color: var(--light-color);
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        &:hover{
+            background-color: var(--quaternary-color);
         }
+            }
+       
+        
 #faq {
     margin-inline: 5px;
     padding-inline: 20px;
@@ -256,7 +271,7 @@ footer {
     form{
     display: grid;
     grid-template-columns: 1fr 1fr ;
-    div:last-of-type,button{
+    div:nth-last-of-type(2),button{
         grid-column: 1/-1;
     }
     button{
