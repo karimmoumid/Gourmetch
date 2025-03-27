@@ -29,17 +29,6 @@
         }
 
         div {
-            &:first-of-type {
-                background-color: var(--secondary-color);
-                padding: 10px;
-                position: absolute;
-                top: 10%;
-                right: 0%;
-                transform: translate(-50%, -50%);
-                border-radius: 100%;
-            }
-
-            &:last-of-type {
                 padding-left: 20px;
                 display: flex;
                 gap: 10px;
@@ -63,7 +52,7 @@
                         background-color: var(--quaternary-color);
                     }
                 }
-            }
+            
         }
 
         button {

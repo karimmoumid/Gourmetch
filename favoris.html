@@ -9,7 +9,9 @@
     <link rel="stylesheet" href="css/rootnavfooter.css">
     <link rel="stylesheet" href="css/styleFavoris.css">
     <script src="js/navscript.js" defer></script>
+    <script src="js/scriptsfav.js" defer></script>
 </head>
+
 <body>
     <header>
         <div>
@@ -35,75 +37,9 @@
     <main>
         <section id="favorite">
             <h2>Mes favorites :</h2>
-            <div>
-            <article>
-                <figure>
-                    <img src="assets/images/diliara-garifullina-D7X-GMeTV7U-unsplash.jpg" alt="tarte aux pommes">
-                    <figcaption>Tarte aux pommes</figcaption>
-                </figure>
-                <div>
-                    <img src="assets/icons/mdi_heart (1).png" alt="icon de coeur pour rajouter aus favoris"
-                        role="button">
-                </div>
-                <div>
-                    <p>Dessert</p>
-                    <p>6O min</p>
-                    <p>Facile</p>
-                </div>
-                <button role="button">Voir recette</button>
-                <button role="button">Suprimer</button>
-            </article>
-            <article>
-                <figure>
-                    <img src="assets/images/louis-hansel-k2ZCm7LCj8E-unsplash.jpg" alt="Couscous">
-                    <figcaption>Couscous</figcaption>
-                </figure>
-                <div>
-                    <img src="assets/icons/mdi_heart (1).png" alt="icon de coeur pour rajouter aus favoris"
-                        role="button">
-                </div>
-                <div>
-                    <p>Entrée</p>
-                    <p>30 min</p>
-                    <p>Difficile</p>
-                </div>
-                <button role="button">Voir recette</button>
-                <button role="button">Suprimer</button>
-            </article>
-            <article>
-                <figure>
-                    <img src="assets/images/diliara-garifullina-D7X-GMeTV7U-unsplash.jpg" alt="tarte aux pommes">
-                    <figcaption>Tarte aux pommes</figcaption>
-                </figure>
-                <div>
-                    <img src="assets/icons/mdi_heart (1).png" alt="icon de coeur pour rajouter aus favoris"
-                        role="button">
-                </div>
-                <div>
-                    <p>Dessert</p>
-                    <p>6O min</p>
-                    <p>Facile</p>
-                </div>
-                <button role="button">Voir recette</button>
-                <button role="button">Suprimer</button>
-            </article>
-            <article>
-                <figure>
-                    <img src="assets/images/louis-hansel-k2ZCm7LCj8E-unsplash.jpg" alt="Couscous">
-                    <figcaption>Couscous</figcaption>
-                </figure>
-                <div>
-                    <img src="assets/icons/mdi_heart (1).png" alt="icon de coeur pour rajouter aus favoris"
-                        role="button">
-                </div>
-                <div>
-                    <p>Entrée</p>
-                    <p>30 min</p>
-                    <p>Difficile</p>
-                </div>
-                <button role="button">Voir recette</button>
-                <button role="button">Suprimer</button>
-            </article>
+            <div id="listefav">
+                
+            </div>
         </section>
     </main>
     <footer>
@@ -127,6 +63,21 @@
         </div>
         <p>©2025 GourmeTech - Tous droits réservés</p>
     </footer>
+    <template id="fav">
+        <article>
+            <figure>
+                <img src="" alt="">
+                <figcaption></figcaption>
+            </figure>
+            <div>
+                <p></p>
+                <p></p>
+                <p></p>
+            </div>
+            <button role="button">Voir recette</button>
+            <button role="button">Suprimer</button>
+        </article>
+    </template>
 </body>
 
 </html>

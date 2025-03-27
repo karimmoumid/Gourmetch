@@ -15,12 +15,12 @@
     box-sizing: border-box;
 }
 .dark {
-    --primary-color: #1e88e5; /* Couleur principale (bleu clair) */
-    --secondary-color: #333333; /* Fond sombre */
-    --tertiary-color: #555555; /* Fond plus clair pour certains éléments */
-    --quaternary-color: #888888; /* Couleur pour les éléments moins importants */
-    --light-color: #ffffff; /* Texte clair */
-    --border-shadow: 0 0 10px rgba(255, 255, 255, 0.786); /* Ombre subtile */
+    --primary-color: #1e88e5; 
+    --secondary-color: #333333; 
+    --tertiary-color: #555555; 
+    --quaternary-color: #888888; 
+    --light-color: #ffffff; 
+    --border-shadow: 0 0 10px rgba(255, 255, 255, 0.786); 
     background-color: #111;
     p,div, li, h2, a, figcaption{color: white;}
     h3{
