@@ -14,6 +14,29 @@
     padding: 0;
     box-sizing: border-box;
 }
+.dark {
+    --primary-color: #1e88e5; /* Couleur principale (bleu clair) */
+    --secondary-color: #333333; /* Fond sombre */
+    --tertiary-color: #555555; /* Fond plus clair pour certains éléments */
+    --quaternary-color: #888888; /* Couleur pour les éléments moins importants */
+    --light-color: #ffffff; /* Texte clair */
+    --border-shadow: 0 0 10px rgba(255, 255, 255, 0.786); /* Ombre subtile */
+    background-color: #111;
+    p,div, li, h2, a, figcaption{color: white;}
+    h3{
+        color: var(--primary-color);
+        a{
+        color:var(--primary-color) ;
+    }}
+    nav{
+        background-color: #111;
+    }
+    @media (max-width: 768px){
+.nav-menu{
+    background-color: var(--primary-color);
+}
+    }
+}
 .show{
     display: flex;
 }
@@ -58,6 +81,9 @@ header {
             div {
                 background-color: var(--secondary-color);
                 text-align: center;
+                img{
+                    cursor: pointer;
+                }
             }
             >img{
                 width: 40px;
@@ -83,6 +109,7 @@ header {
         right: 0;
         background-color: var(--primary-color);
         border-top: none;
+        z-index: 66;
 
         ul {
             width: 40vw;

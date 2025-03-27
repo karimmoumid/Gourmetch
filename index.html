@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/rootnavfooter.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/navscript.js" defer></script>
+    <script src="js/scripts.js" defer></script>
 </head>
 
 <body>
@@ -24,10 +25,9 @@
         <div>
             <nav role="navigation" id="nav-menu" class="nav-menu">
                 <ul>
-                    <li><a href="#">Accueil</a></li>
-                    <li><a href="#">Ajouter une recette</a></li>
-                    <li><a href="#">Mes favoris</a></li>
-                    <li><a href="#">A propos</a></li>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="favoris.html">Mes favoris</a></li>
+                    <li><a href="a-propos.html">A propos</a></li>
                 </ul>
             </nav>
             <div><img src="assets/icons/Vector (1).png" alt="icon pour changer de theme" role="button"></div>
@@ -76,7 +76,7 @@
             </article>
         </section>
         <section id="recette">
-            <article>
+            <article data-diff="facile" data-temps="long" data-categ="dessert">
                 <figure>
                     <img src="assets/images/diliara-garifullina-D7X-GMeTV7U-unsplash.jpg" alt="tarte aux pommes">
                     <figcaption>Tarte aux pommes</figcaption>
@@ -92,7 +92,7 @@
                 </div>
                 <button role="button">Voir recette</button>
             </article>
-            <article>
+            <article data-diff="dmoyen" data-temps="moyen" data-categ="plat">
                 <figure>
                     <img src="assets/images/sour-moha-5t2SP3vQz28-unsplash.jpg" alt="tagine">
                     <figcaption>Tagine</figcaption>
@@ -106,9 +106,9 @@
                     <p>45 min</p>
                     <p>Moyen</p>
                 </div>
-                <button role="button">Voir recette</button>
+                <button role="button"><a href="recette.html">Voir recette</a></button>
             </article>
-            <article>
+            <article data-diff="difficile" data-temps="rapide" data-categ="entree">
                 <figure>
                     <img src="assets/images/louis-hansel-k2ZCm7LCj8E-unsplash.jpg" alt="Couscous">
                     <figcaption>Couscous</figcaption>
@@ -132,11 +132,11 @@
                 <nav role="navigation">
                     <h3>Navigation</h3>
                     <ul>
-                        <li><a href="">Accueil</a></li>
-                        <li><a href="">Ajouter une recette</a></li>
-                        <li><a href="">Mes favoris</a></li>
-                        <li><a href="">A propos</a></li>
-                    </ul>
+                        <ul>
+                            <li><a href="index.html">Accueil</a></li>
+                            <li><a href="favoris.html">Mes favoris</a></li>
+                            <li><a href="a-propos.html">A propos</a></li>
+                        </ul>
             </div>
             <div>
                 <h3><a href="">A propos de GourmeTech</a></h3>
