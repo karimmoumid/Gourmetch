@@ -11,3 +11,14 @@ Avant de commencer, assurez-vous d'avoir les outils suivants installés sur votr
 - [Navigateur Web](https://www.google.com/chrome/) (Chrome, Firefox, Safari, etc.)
 - [Éditeur de texte](https://code.visualstudio.com/) (Visual Studio Code, Sublime Text, etc.)
 - [Node.js](https://nodejs.org/) (si vous souhaitez utiliser un serveur local ou des outils de développement)
+
+---
+
+## Installation
+
+### 1. Cloner le dépôt
+
+Clonez ce projet sur votre machine locale en utilisant Git :
+
+```bash
+git clone https://github.com/votre-utilisateur/gourmetech.git
