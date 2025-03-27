@@ -1,20 +1,19 @@
-## Installation et Lancement du Projet
+# Installation et Lancement du Projet
 
-### 1. Clonez le repository
-
+## 1. Clonez le repository
 Clonez ce repository sur votre machine locale en exécutant la commande suivante dans votre terminal :
 
-```bash
+
 git clone https://github.com/votre-utilisateur/gourmetech.git
 
-### 2. Accédez au répertoire du projet
+## 2. Accédez au répertoire du projet
 
 Allez dans le répertoire du projet :
-bash
+```bash
 Copier
 cd gourmetech
-
-### 3. Ouvrir le projet dans votre éditeur
+```
+## 3. Ouvrir le projet dans votre éditeur
 
 Ouvrez le fichier index.html dans votre éditeur de texte préféré.
 
