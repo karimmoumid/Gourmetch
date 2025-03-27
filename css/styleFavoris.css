@@ -1,103 +1,135 @@
-#favorite{
-    margin-inline: 5px;
-    padding-inline: 20px;
-    padding-block: 10px;
-    margin-bottom: 30px;
-    box-shadow: var(--border-shadow);
-    article {
-        position: relative;
-        margin-block: 10px;
-        box-shadow: var(--border-shadow);
-        margin-inline: 5px;
-        border-radius: 10px;
+/* ----------------------------------------
+   Favorite Section Styling
+---------------------------------------- */
 
+/* Style général pour la section #favorite */
+#favorite {
+    margin-inline: 5px; /* Marge horizontale */
+    padding-inline: 20px; /* Padding horizontal */
+    padding-block: 10px; /* Padding vertical */
+    margin-bottom: 30px; /* Marge inférieure */
+    box-shadow: var(--border-shadow); /* Ombre autour de la section */
+
+    /* Style pour les articles à l'intérieur de #favorite */
+    article {
+        position: relative; /* Positionnement relatif pour les éléments internes */
+        margin-block: 10px; /* Marge verticale entre les articles */
+        box-shadow: var(--border-shadow); /* Ombre autour des articles */
+        margin-inline: 5px; /* Marge horizontale */
+        border-radius: 10px; /* Bordures arrondies */
+
+        /* Style pour l'image à l'intérieur de chaque article */
         figure {
             img {
-                width: 100%;
-                aspect-ratio: 1.5/1;
-                object-fit: cover;
-                object-position: 50% 75%;
-                border-top-left-radius: 10px;
-                border-top-right-radius: 10px;
+                width: 100%; /* L'image prend toute la largeur */
+                aspect-ratio: 1.5/1; /* Ratio d'aspect pour l'image */
+                object-fit: cover; /* Couvrit toute la zone, en ajustant l'image */
+                object-position: 50% 75%; /* Position de l'image à l'intérieur du cadre */
+                border-top-left-radius: 10px; /* Bordure arrondie en haut à gauche */
+                border-top-right-radius: 10px; /* Bordure arrondie en haut à droite */
             }
 
+            /* Style du texte sous l'image */
             figcaption {
-                padding-left: 20px;
-                font-size: 2rem;
+                padding-left: 20px; /* Padding à gauche */
+                font-size: 2rem; /* Taille de la police */
             }
         }
 
+        /* Style pour les informations supplémentaires sous l'image */
         div {
-                padding-left: 20px;
-                display: flex;
-                gap: 10px;
-                margin-block: 10px;
+            padding-left: 20px; /* Padding à gauche */
+            display: flex; /* Utilisation de flexbox pour disposer les éléments */
+            gap: 10px; /* Espacement entre les éléments */
+            margin-block: 10px; /* Marge verticale entre les éléments */
 
-                p {
-                    padding: 5px;
-                    padding-inline: 9px;
-                    color: var(--light-color);
-                    border-radius: 15px;
+            /* Style pour chaque paragraphe dans le div */
+            p {
+                padding: 5px; /* Padding autour du texte */
+                padding-inline: 9px; /* Padding horizontal */
+                color: var(--light-color); /* Couleur du texte */
+                border-radius: 15px; /* Bordures arrondies */
 
-                    &:first-of-type {
-                        background-color: var(--primary-color);
-                    }
-
-                    &:nth-last-of-type(2) {
-                        background-color: var(--tertiary-color);
-                    }
-
-                    &:last-of-type {
-                        background-color: var(--quaternary-color);
-                    }
+                /* Premier paragraphe avec fond primaire */
+                &:first-of-type {
+                    background-color: var(--primary-color); /* Fond primaire */
                 }
-            
+
+                /* Avant-dernier paragraphe avec fond tertiaire */
+                &:nth-last-of-type(2) {
+                    background-color: var(--tertiary-color); /* Fond tertiaire */
+                }
+
+                /* Dernier paragraphe avec fond quaternaire */
+                &:last-of-type {
+                    background-color: var(--quaternary-color); /* Fond quaternaire */
+                }
+            }
         }
 
+        /* Style pour le bouton à l'intérieur de chaque article */
         button {
-            cursor: pointer;
-            margin-inline: 20px;
-            width: calc(100% - 40px);
-            background-color: var(--primary-color);
-            color: var(--light-color);
-            border: 0;
-            font-size: 1.5rem;
-            padding-block: 10px;
-            margin-bottom: 10px;
-            border-radius: 5px;
-            a{
-                display: block;
-                color: var(--light-color);
-                text-decoration: none;
-                width: 100%;
-                height: 100%;
+            cursor: pointer; /* Curseur pointeur au survol */
+            margin-inline: 20px; /* Marge horizontale autour du bouton */
+            width: calc(100% - 40px); /* Largeur du bouton, avec une marge de 20px de chaque côté */
+            background-color: var(--primary-color); /* Couleur de fond du bouton */
+            color: var(--light-color); /* Couleur du texte du bouton */
+            border: 0; /* Pas de bordure */
+            font-size: 1.5rem; /* Taille de la police du bouton */
+            padding-block: 10px; /* Padding vertical autour du bouton */
+            margin-bottom: 10px; /* Marge inférieure pour espacer les éléments */
+            border-radius: 5px; /* Bordures arrondies */
+            
+            /* Style du lien à l'intérieur du bouton */
+            a {
+                display: block; /* Afficher le lien comme un bloc pour occuper toute la largeur */
+                color: var(--light-color); /* Couleur du texte du lien */
+                text-decoration: none; /* Retirer le soulignement du lien */
+                width: 100%; /* Largeur du lien */
+                height: 100%; /* Hauteur du lien */
             }
         }
     }
 }
 
+/* ----------------------------------------
+   Responsive Design for Medium Screens
+---------------------------------------- */
 
+/* Ajouts spécifiques pour les écrans de taille moyenne (tablettes) */
 @media (min-width: 768px) {
-    #favorite{
-        div{
-            display: flex;
-            flex-wrap: wrap;
-            article{
-                flex-basis: 48%;
+    /* Ajustement de la disposition des articles dans #favorite */
+    #favorite {
+        div {
+            display: flex; /* Utiliser flexbox pour la disposition des articles */
+            flex-wrap: wrap; /* Permettre aux articles de se répartir sur plusieurs lignes si nécessaire */
+            
+            /* Chaque article prendra 48% de la largeur pour un alignement en 2 colonnes */
+            article {
+                flex-basis: 48%; /* Largeur de base pour chaque article */
             }
-            }
+        }
     }
 }
 
-@media(min-width: 1024px) {
-    :root{
-        font-size: 1.01rem;
+/* ----------------------------------------
+   Responsive Design for Large Screens
+---------------------------------------- */
+
+/* Ajustements pour les écrans larges (bureaux) */
+@media (min-width: 1024px) {
+    /* Augmenter légèrement la taille de la police sur les grands écrans */
+    :root {
+        font-size: 1.01rem; /* Augmenter la taille de la police pour les écrans larges */
     }
-    #favorite{
-        div{
-            article{
-                flex-basis: 32%;
+
+    /* Ajustement de la disposition des articles dans #favorite */
+    #favorite {
+        div {
+            /* Chaque article prendra 32% de la largeur pour un alignement en 3 colonnes */
+            article {
+                flex-basis: 32%; /* Largeur de base pour chaque article */
             }
-            }
+        }
     }
 }

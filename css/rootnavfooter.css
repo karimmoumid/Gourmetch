@@ -1,5 +1,10 @@
+/* ----------------------------------------
+   Global Style Variables and Reset
+---------------------------------------- */
+
+/* Variables globales pour les couleurs et la taille de police */
 :root {
-    font-size: 10px; /* Définir la taille de police de base */
+    font-size: 10px; /* Taille de police de base */
     --primary-color: #E67F22; /* Couleur primaire */
     --secondary-color: #F9F9F9; /* Couleur secondaire */
     --tertiary-color: #2DCD73; /* Couleur tertiaire */
@@ -10,67 +15,76 @@
     --border-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre des bordures */
 }
 
-figcaption {
-    font-weight: 700; /* Appliquer un poids de police gras */
-}
-
+/* Réinitialisation de styles de base */
 * {
-    font-family: "Roboto", sans-serif; /* Utilisation de la police Roboto */
-    margin: 0px; /* Retirer les marges par défaut */
-    padding: 0; /* Retirer le padding par défaut */
-    box-sizing: border-box; /* Inclure les bordures et paddings dans les dimensions des éléments */
+    font-family: "Roboto", sans-serif; /* Police de caractère principale */
+    margin: 0; /* Annuler les marges par défaut */
+    padding: 0; /* Annuler les paddings par défaut */
+    box-sizing: border-box; /* Inclure les bordures et les paddings dans le calcul des dimensions */
 }
 
-/* Style pour le thème sombre */
+/* ----------------------------------------
+   Dark Theme Styling
+---------------------------------------- */
+
+/* Appliquer les styles pour le thème sombre */
 .dark {
-    --primary-color: #1e88e5; 
-    --secondary-color: #333333; 
-    --tertiary-color: #555555; 
-    --quaternary-color: #888888; 
-    --light-color: #ffffff; 
-    --border-shadow: 0 0 10px rgba(255, 255, 255, 0.786); 
+    --primary-color: #1e88e5;
+    --secondary-color: #333333;
+    --tertiary-color: #555555;
+    --quaternary-color: #888888;
+    --light-color: #ffffff;
+    --border-shadow: 0 0 10px rgba(255, 255, 255, 0.786);
     background-color: #111; /* Fond sombre */
 
     p, div, li, h2, a, figcaption {
-        color: white; /* Texte en blanc */
+        color: white; /* Couleur du texte en blanc */
     }
 
     h3 {
-        color: var(--primary-color); /* Couleur du texte en h3 */
+        color: var(--primary-color); /* Couleur du texte pour h3 */
         
         a {
-            color: var(--primary-color); /* Couleur des liens dans h3 */
+            color: var(--primary-color); /* Liens dans h3 */
         }
     }
 
     nav {
-        background-color: #111; /* Fond sombre pour la navigation */
+        background-color: #111; /* Fond sombre de la navigation */
     }
 
-    /* Style pour les menus sur mobile */
+    /* Menu mobile : changer la couleur de fond du menu */
     @media (max-width: 768px) {
         .nav-menu {
-            background-color: var(--primary-color); /* Changer la couleur du fond du menu */
+            background-color: var(--primary-color);
         }
     }
 }
 
-/* Classe pour afficher un élément en flex */
+/* ----------------------------------------
+   Flexbox Utility Class
+---------------------------------------- */
+
+/* Classe pour afficher les éléments en flex */
 .show {
     display: flex;
 }
 
+/* ----------------------------------------
+   Header Styles
+---------------------------------------- */
+
 header {
     margin-inline: 5px; /* Marge horizontale */
     padding-inline: 20px; /* Padding horizontal */
-    display: flex; /* Utilisation de flexbox */
-    justify-content: space-between; /* Espacer les éléments à gauche et à droite */
+    display: flex; /* Flexbox pour la mise en page */
+    justify-content: space-between; /* Espacement entre les éléments à gauche et à droite */
     padding-block: 10px; /* Padding vertical */
     margin-bottom: 30px; /* Marge inférieure */
-    position: relative; /* Positionnement relatif pour les éléments positionnés dans le header */
-    box-shadow: var(--border-shadow); /* Ombre autour de l'en-tête */
+    position: relative; /* Position relative pour un positionnement absolu interne */
+    box-shadow: var(--border-shadow); /* Ombre autour du header */
 
-    >div {
+    > div {
         display: flex; /* Flexbox pour les éléments internes */
         gap: 15px; /* Espacement entre les éléments enfants */
 
@@ -82,12 +96,12 @@ header {
             align-content: center; /* Centrer les éléments à l'intérieur */
         }
 
-        /* Premier bloc dans le header */
+        /* Premier bloc dans le header (logo) */
         &:first-of-type {
             div {
-                background-color: var(--primary-color); /* Couleur de fond de l'élément */
-                align-self: center; /* Alignement vertical au centre */
-                
+                background-color: var(--primary-color); /* Fond de l'élément */
+                align-self: center; /* Alignement vertical centré */
+
                 p {
                     color: var(--light-color); /* Couleur du texte */
                     font-weight: 900; /* Poids du texte */
@@ -95,25 +109,25 @@ header {
                 }
             }
             h1 {
-                align-self: center; /* Alignement vertical du titre */
+                align-self: center; /* Centrer le titre verticalement */
             }
         }
 
-        /* Deuxième bloc dans le header */
+        /* Deuxième bloc dans le header (icône ou bouton) */
         &:last-of-type {
             div {
-                background-color: var(--secondary-color); /* Couleur de fond secondaire */
+                background-color: var(--secondary-color); /* Fond secondaire */
                 text-align: center; /* Centrer le texte dans le div */
-                
+
                 img {
-                    cursor: pointer; /* Le curseur devient un pointeur lors du survol de l'image */
+                    cursor: pointer; /* Le curseur devient un pointeur au survol */
                 }
             }
 
-            >img {
+            > img {
                 width: 40px; /* Largeur de l'image */
                 aspect-ratio: 1/1; /* Ratio de l'image carré */
-                cursor: pointer; /* Le curseur devient un pointeur lors du survol de l'image */
+                cursor: pointer; /* Le curseur devient un pointeur */
             }
         }
     }
@@ -125,38 +139,43 @@ header {
         margin: 0; /* Retirer la marge par défaut */
     }
 
+    /* Navigation cachée par défaut */
     nav {
-        display: none; /* Cacher la navigation par défaut */
-        position: absolute; /* Position absolue pour la navigation */
-        top: 100%; /* Positionner la navigation juste sous le header */
-        right: 0; /* Aligner à droite */
-        background-color: var(--primary-color); /* Fond de la navigation */
-        border-top: none; /* Pas de bordure au sommet */
-        z-index: 66; /* Priorité de superposition de la navigation */
+        display: none;
+        position: absolute; /* Position absolue sous le header */
+        top: 100%;
+        right: 0;
+        background-color: var(--primary-color);
+        border-top: none;
+        z-index: 66;
 
         ul {
-            width: 40vw; /* Largeur de la liste */
+            width: 40vw; /* Largeur de la liste de navigation */
             padding-block: 10px; /* Padding vertical */
             padding-left: 10px; /* Padding gauche */
-            display: flex; /* Utiliser flexbox pour la disposition */
+            display: flex;
             flex-direction: column; /* Disposer les éléments en colonne */
             gap: 10px; /* Espacement entre les éléments */
             
             li {
-                list-style: none; /* Retirer les puces des listes */
+                list-style: none; /* Retirer les puces de la liste */
 
                 a {
                     text-decoration: none; /* Retirer le soulignement des liens */
                     color: var(--light-color); /* Couleur des liens */
-                    font-size: 1.2rem; /* Taille de la police */
+                    font-size: 1.2rem; /* Taille du texte */
                 }
             }
         }
     }
 }
 
+/* ----------------------------------------
+   Footer Styles
+---------------------------------------- */
+
 footer {
-    >div {
+    > div {
         padding-bottom: 10px; /* Padding inférieur */
         padding-inline: 10px; /* Padding horizontal */
         box-shadow: var(--border-shadow); /* Ombre autour du footer */
@@ -166,11 +185,11 @@ footer {
         h3 {
             color: var(--primary-color); /* Couleur du titre */
             padding-block: 5px; /* Padding vertical */
-            
+
             a {
                 color: var(--primary-color); /* Couleur des liens */
                 text-decoration: none; /* Retirer le soulignement des liens */
-                
+
                 &:hover {
                     color: var(--quaternary-color); /* Couleur au survol */
                 }
@@ -180,11 +199,11 @@ footer {
         li {
             list-style-type: none; /* Retirer les puces des listes */
             padding-block: 4px; /* Padding vertical */
-            
+
             a {
                 color: #111; /* Couleur du lien */
                 text-decoration: none; /* Retirer le soulignement des liens */
-                
+
                 &:hover {
                     color: var(--primary-color); /* Couleur au survol */
                 }
@@ -192,24 +211,34 @@ footer {
         }
     }
 
-    >p {
+    > p {
         text-align: center; /* Centrer le texte */
         padding-block: 10px; /* Padding vertical */
     }
 }
 
+/* ----------------------------------------
+   Responsive Design for Medium Screens
+---------------------------------------- */
+
+/* Grilles de footer sur écrans moyens */
 @media (min-width: 768px) {
     footer {
-        >div {
+        > div {
             display: grid; /* Utiliser une grille pour le footer */
             grid-template-columns: 1fr 1fr; /* Créer 2 colonnes égales */
         }
     }
 }
 
+/* ----------------------------------------
+   Responsive Design for Large Screens
+---------------------------------------- */
+
+/* Grilles et ajustement du header sur grands écrans */
 @media(min-width: 1024px) {
     header {
-        >div {
+        > div {
             &:first-of-type {
                 flex: 1; /* Premier bloc prend 1 part de l'espace */
             }
@@ -217,14 +246,14 @@ footer {
                 justify-content: space-between; /* Espacer les éléments à gauche et à droite */
                 flex: 1.6; /* Dernier bloc prend 1.6 parts de l'espace */
             }
-            >img {
-                display: none; /* Masquer l'image sur grand écran */
+            > img {
+                display: none; /* Masquer l'image sur les grands écrans */
             }
         }
 
         nav {
             background-color: var(--light-color); /* Fond clair pour la navigation */
-            display: flex; /* Utiliser flexbox pour la navigation */
+            display: flex; /* Flexbox pour la navigation */
             position: relative; /* Positionner la navigation normalement */
             top: 0; /* Remettre à zéro la position verticale */
 
@@ -232,7 +261,7 @@ footer {
                 flex-direction: row; /* Disposer les éléments de la navigation en ligne */
                 justify-content: space-between; /* Espacer les éléments */
                 padding-inline: 10px; /* Padding horizontal */
-                
+
                 li {
                     a {
                         color: var(--dark-color); /* Couleur des liens */
@@ -242,7 +271,7 @@ footer {
                     &:hover {
                         padding: 4px; /* Padding au survol */
                         background-color: var(--secondary-color); /* Fond secondaire au survol */
-                        
+
                         a {
                             color: var(--primary-color); /* Couleur des liens au survol */
                         }

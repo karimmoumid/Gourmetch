@@ -1,206 +1,267 @@
+/* ----------------------------------------
+   General Info Section Styling
+---------------------------------------- */
 
-#infosGenerales{
-    margin-inline: 5px;
-    padding-inline: 20px;
-    padding-block: 10px;
-    margin-bottom: 30px;
-    box-shadow: var(--border-shadow);
-    figure{
-        position: relative;
-    img{
-        width: 100%;
-    }
-    figcaption{
-        font-size: 4rem;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        padding: 10px;
-        background-color: rgba(0, 0, 0, 0.7);
-        color: var(--light-color);
-        transform: translate(-50%, -50%);
-    }
-}
-div{
-    h3{
-        font-weight: 800;
-    }
-h2{
-    font-size: 1.6rem;
-    font-weight: 800;
-    color: var(--primary-color);
-    text-align: center;
-    padding-block: 20px;
-}
-p{
-    margin-block: 5px;
-    span{
-        font-weight: 800;
-    }
-}
-button{
-    background-color: var(--primary-color);
-            border: 0;
-            border-radius: 4px;
-            color: var(--light-color);
-            color: var(--light-color);
-            padding: 2px;
-            cursor: pointer;
-}
-}
-}
-#listeIngr{
-    margin-inline: 5px;
-    padding-inline: 20px;
-    padding-block: 10px;
-    margin-bottom: 30px;
-    box-shadow: var(--border-shadow);
-  h3{padding-block: 10px;}
-    ul{
-        display: grid;
-        padding-inline: 20px;
-        grid-template-columns: 1fr 1fr;
-        row-gap: 10px;
-        align-items: center;
-    }
-}
-#preparation{
-    margin-inline: 5px;
-    padding-inline: 20px;
-    padding-block: 10px;
-    margin-bottom: 30px;
-    box-shadow: var(--border-shadow);
-     ol{
-        padding-inline: 20px;
-        li{margin-block: 10px;}
-     }
-}
-#suggestion{
-    margin-inline: 5px;
-    padding-inline: 20px;
-    padding-block: 10px;
-    margin-bottom: 30px;
-    box-shadow: var(--border-shadow);
-    article {
-        position: relative;
-        margin-block: 10px;
-        box-shadow: var(--border-shadow);
-        margin-inline: 5px;
-        border-radius: 10px;
+/* Style général pour la section #infosGenerales */
+#infosGenerales {
+    margin-inline: 5px; /* Marge horizontale */
+    padding-inline: 20px; /* Padding horizontal */
+    padding-block: 10px; /* Padding vertical */
+    margin-bottom: 30px; /* Marge inférieure */
+    box-shadow: var(--border-shadow); /* Ombre autour de la section */
 
-        figure {
-            img {
-                width: 100%;
-                aspect-ratio: 1.5/1;
-                object-fit: cover;
-                object-position: 50% 75%;
-                border-top-left-radius: 10px;
-                border-top-right-radius: 10px;
-            }
+    /* Style pour les figures à l'intérieur de #infosGenerales */
+    figure {
+        position: relative; /* Positionnement relatif pour permettre un placement absolu dans figcaption */
 
-            figcaption {
-                padding-left: 20px;
-                font-size: 2rem;
+        /* Style de l'image dans la figure */
+        img {
+            width: 100%; /* L'image occupe toute la largeur de son conteneur */
+        }
+
+        /* Style pour la légende (figcaption) */
+        figcaption {
+            font-size: 4rem; /* Taille de la police */
+            position: absolute; /* Positionnement absolu de la légende */
+            top: 50%; /* Centrer verticalement */
+            left: 50%; /* Centrer horizontalement */
+            padding: 10px; /* Padding autour du texte */
+            background-color: rgba(0, 0, 0, 0.7); /* Fond sombre avec transparence */
+            color: var(--light-color); /* Couleur du texte */
+            transform: translate(-50%, -50%); /* Centrer parfaitement */
+        }
+    }
+
+    /* Style pour les éléments div à l'intérieur de #infosGenerales */
+    div {
+        h3 {
+            font-weight: 800; /* Poids de la police pour les titres */
+        }
+
+        h2 {
+            font-size: 1.6rem; /* Taille de la police pour les sous-titres */
+            font-weight: 800; /* Poids de la police */
+            color: var(--primary-color); /* Couleur primaire */
+            text-align: center; /* Centrer le texte */
+            padding-block: 20px; /* Padding vertical */
+        }
+
+        p {
+            margin-block: 5px; /* Marge verticale entre les paragraphes */
+            span {
+                font-weight: 800; /* Poids de la police pour le texte en span */
             }
         }
 
+        button {
+            background-color: var(--primary-color); /* Couleur de fond du bouton */
+            border: 0; /* Pas de bordure */
+            border-radius: 4px; /* Bordures arrondies */
+            color: var(--light-color); /* Couleur du texte */
+            padding: 2px; /* Padding autour du texte */
+            cursor: pointer; /* Curseur pointeur au survol */
+        }
+    }
+}
+
+/* ----------------------------------------
+   Ingredients List Section Styling
+---------------------------------------- */
+
+/* Style pour la section #listeIngr */
+#listeIngr {
+    margin-inline: 5px; /* Marge horizontale */
+    padding-inline: 20px; /* Padding horizontal */
+    padding-block: 10px; /* Padding vertical */
+    margin-bottom: 30px; /* Marge inférieure */
+    box-shadow: var(--border-shadow); /* Ombre autour de la section */
+
+    h3 {
+        padding-block: 10px; /* Padding vertical pour le titre */
+    }
+
+    /* Style pour la liste d'ingrédients */
+    ul {
+        display: grid; /* Utiliser un système de grille pour les éléments de la liste */
+        padding-inline: 20px; /* Padding horizontal */
+        grid-template-columns: 1fr 1fr; /* 2 colonnes pour la grille */
+        row-gap: 10px; /* Espacement vertical entre les lignes */
+        align-items: center; /* Alignement centré des éléments */
+    }
+}
+
+/* ----------------------------------------
+   Preparation Section Styling
+---------------------------------------- */
+
+/* Style pour la section #preparation */
+#preparation {
+    margin-inline: 5px; /* Marge horizontale */
+    padding-inline: 20px; /* Padding horizontal */
+    padding-block: 10px; /* Padding vertical */
+    margin-bottom: 30px; /* Marge inférieure */
+    box-shadow: var(--border-shadow); /* Ombre autour de la section */
+
+    /* Style pour la liste ordonnée (ol) */
+    ol {
+        padding-inline: 20px; /* Padding horizontal */
+        li {
+            margin-block: 10px; /* Marge verticale pour chaque élément de la liste */
+        }
+    }
+}
+
+/* ----------------------------------------
+   Suggestions Section Styling
+---------------------------------------- */
+
+/* Style pour la section #suggestion */
+#suggestion {
+    margin-inline: 5px; /* Marge horizontale */
+    padding-inline: 20px; /* Padding horizontal */
+    padding-block: 10px; /* Padding vertical */
+    margin-bottom: 30px; /* Marge inférieure */
+    box-shadow: var(--border-shadow); /* Ombre autour de la section */
+
+    /* Style pour les articles à l'intérieur de #suggestion */
+    article {
+        position: relative; /* Positionnement relatif pour les éléments internes */
+        margin-block: 10px; /* Marge verticale */
+        box-shadow: var(--border-shadow); /* Ombre autour de l'article */
+        margin-inline: 5px; /* Marge horizontale */
+        border-radius: 10px; /* Bordures arrondies */
+
+        /* Style pour l'image à l'intérieur de l'article */
+        figure {
+            img {
+                width: 100%; /* L'image prend toute la largeur de l'article */
+                aspect-ratio: 1.5/1; /* Ratio d'aspect pour l'image */
+                object-fit: cover; /* L'image couvre toute la zone sans déformation */
+                object-position: 50% 75%; /* Positionnement spécifique de l'image */
+                border-top-left-radius: 10px; /* Bordure arrondie en haut à gauche */
+                border-top-right-radius: 10px; /* Bordure arrondie en haut à droite */
+            }
+
+            /* Style pour la légende de l'image */
+            figcaption {
+                padding-left: 20px; /* Padding à gauche */
+                font-size: 2rem; /* Taille de la police */
+            }
+        }
+
+        /* Style pour les divs à l'intérieur de chaque article */
         div {
             &:first-of-type {
-                background-color: var(--secondary-color);
-                padding: 10px;
-                position: absolute;
-                top: 10%;
-                right: 0%;
-                transform: translate(-50%, -50%);
-                border-radius: 100%;
+                background-color: var(--secondary-color); /* Couleur de fond secondaire */
+                padding: 10px; /* Padding autour du texte */
+                position: absolute; /* Positionnement absolu pour un positionnement précis */
+                top: 10%; /* Positionnement vertical */
+                right: 0%; /* Positionnement horizontal */
+                transform: translate(-50%, -50%); /* Centrer l'élément */
+                border-radius: 100%; /* Forme ronde */
             }
 
             &:last-of-type {
-                padding-left: 20px;
-                display: flex;
-                gap: 10px;
-                margin-block: 10px;
+                padding-left: 20px; /* Padding à gauche */
+                display: flex; /* Flexbox pour organiser les éléments */
+                gap: 10px; /* Espacement entre les éléments */
+                margin-block: 10px; /* Marge verticale */
 
+                /* Style pour chaque paragraphe à l'intérieur du dernier div */
                 p {
-                    padding: 5px;
-                    padding-inline: 9px;
-                    color: var(--light-color);
-                    border-radius: 15px;
+                    padding: 5px; /* Padding autour du texte */
+                    padding-inline: 9px; /* Padding horizontal */
+                    color: var(--light-color); /* Couleur du texte */
+                    border-radius: 15px; /* Bordures arrondies */
 
                     &:first-of-type {
-                        background-color: var(--primary-color);
+                        background-color: var(--primary-color); /* Couleur de fond primaire */
                     }
 
                     &:nth-last-of-type(2) {
-                        background-color: var(--tertiary-color);
+                        background-color: var(--tertiary-color); /* Couleur de fond tertiaire */
                     }
 
                     &:last-of-type {
-                        background-color: var(--quaternary-color);
+                        background-color: var(--quaternary-color); /* Couleur de fond quaternaire */
                     }
                 }
             }
         }
 
+        /* Style pour le bouton dans chaque article */
         button {
-            margin-inline: 20px;
-            width: calc(100% - 40px);
-            background-color: var(--primary-color);
-            color: var(--light-color);
-            border: 0;
-            font-size: 1.5rem;
-            padding-block: 10px;
-            margin-bottom: 10px;
-            border-radius: 5px;
-        
+            margin-inline: 20px; /* Marge horizontale */
+            width: calc(100% - 40px); /* Largeur du bouton avec marges */
+            background-color: var(--primary-color); /* Couleur de fond du bouton */
+            color: var(--light-color); /* Couleur du texte */
+            border: 0; /* Pas de bordure */
+            font-size: 1.5rem; /* Taille de la police du bouton */
+            padding-block: 10px; /* Padding vertical */
+            margin-bottom: 10px; /* Marge inférieure */
+            border-radius: 5px; /* Bordures arrondies */
         }
     }
 }
 
+/* ----------------------------------------
+   Responsive Design for Medium Screens
+---------------------------------------- */
 
+/* Ajout de styles pour les écrans moyens (tablettes et plus) */
 @media (min-width: 768px) {
-#infosGenerales{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    div{
-        padding-left: 20px;
-        p{
-            margin-block: 20px;
-        }
-    }
-}
-#listeIngr{
-    ul{
-        grid-template-columns: repeat(3,1fr);
-    }
-}
-
-
-#preparation{
-    ol{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 10px;
-        column-gap: 25px;
-    }
-}
-#suggestion{
-    >div{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    }
-}
-}
-
-@media(min-width: 1024px) {
-    :root{
-        font-size: 1.01rem;
-    }
-    #listeIngr{
-        ul{
-            grid-template-columns: repeat(4,1fr);
+    /* Disposition en grille pour #infosGenerales */
+    #infosGenerales {
+        display: grid; /* Utilisation de grid pour la mise en page */
+        grid-template-columns: 1fr 1fr; /* 2 colonnes pour les informations générales */
+        div {
+            padding-left: 20px; /* Padding à gauche */
+            p {
+                margin-block: 20px; /* Marge verticale plus grande */
+            }
         }
     }
 
-   
+    /* Disposition de la liste d'ingrédients avec 3 colonnes */
+    #listeIngr {
+        ul {
+            grid-template-columns: repeat(3, 1fr); /* 3 colonnes pour la liste d'ingrédients */
+        }
+    }
+
+    /* Disposition en grille pour la préparation avec 2 colonnes */
+    #preparation {
+        ol {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* 2 colonnes pour les étapes de préparation */
+            gap: 10px; /* Espacement entre les éléments */
+            column-gap: 25px; /* Espacement supplémentaire entre les colonnes */
+        }
+    }
+
+    /* Disposition en grille pour les suggestions */
+    #suggestion {
+        > div {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* 2 colonnes pour les suggestions */
+        }
+    }
+}
+
+/* ----------------------------------------
+   Responsive Design for Large Screens
+---------------------------------------- */
+
+/* Ajustements pour les écrans larges (ordinateurs de bureau) */
+@media (min-width: 1024px) {
+    :root {
+        font-size: 1.01rem; /* Augmentation de la taille de la police sur les grands écrans */
+    }
+
+    /* Disposition de la liste d'ingrédients avec 4 colonnes */
+    #listeIngr {
+        ul {
+            grid-template-columns: repeat(4, 1fr); /* 4 colonnes pour la liste d'ingrédients */
+        }
+    }
 }

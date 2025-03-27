@@ -1,154 +1,202 @@
+/* ----------------------------------------
+   General Styling for Sections
+---------------------------------------- */
 
+/* Style pour la section #information */
 #information {
-    margin-inline: 5px;
-    padding-inline: 20px;
-    padding-block: 10px;
-    margin-bottom: 30px;
-    box-shadow: var(--border-shadow);
+    margin-inline: 5px; /* Marge horizontale */
+    padding-inline: 20px; /* Padding horizontal */
+    padding-block: 10px; /* Padding vertical */
+    margin-bottom: 30px; /* Marge inférieure */
+    box-shadow: var(--border-shadow); /* Ombre autour de la section */
 
-    h2,
-    p {
-        margin-block: 5px;
+    /* Espacement autour des titres et paragraphes */
+    h2, p {
+        margin-block: 5px; /* Marge verticale pour les éléments h2 et p */
     }
 }
 
+/* Style pour la section #contact */
 #contact {
     margin-inline: 5px;
     padding-inline: 20px;
     padding-block: 10px;
     margin-bottom: 30px;
-    box-shadow: var(--border-shadow);
-h2{
-    text-align: center;
-    margin-bottom: 10px;
-}
+    box-shadow: var(--border-shadow); /* Ombre autour de la section */
+
+    /* Style spécifique pour le titre h2 */
+    h2 {
+        text-align: center; /* Centrer le titre */
+        margin-bottom: 10px; /* Marge inférieure */
+    }
+
+    /* Formulaire de contact */
     form {
+        display: flex; /* Utilisation de flexbox */
+        flex-direction: column; /* Disposition en colonne */
+        gap: 10px; /* Espacement entre les éléments du formulaire */
 
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        .invalid-feedback{
-            color: red;
-            display: none;
+        /* Feedback d'erreur */
+        .invalid-feedback {
+            color: red; /* Couleur du texte d'erreur */
+            display: none; /* Masquer le message d'erreur par défaut */
         }
-        div{
-            display: flex;
-            flex-direction: column;
-            input:not([type=checkbox]), textarea{
-                padding: 10px;
-        border-radius: 5px;
-        border: 1px solid var(--dark-color);
-        gap: 10px;
-        &.is-invalid{
-            ~ .invalid-feedback{
-                display: initial;
+
+        /* Style pour les div contenant les champs de formulaire */
+        div {
+            display: flex; /* Flexbox pour la disposition des éléments */
+            flex-direction: column; /* Disposition en colonne */
+
+            /* Style pour les champs de saisie (input et textarea) */
+            input:not([type=checkbox]), textarea {
+                padding: 10px; /* Padding à l'intérieur des champs */
+                border-radius: 5px; /* Bordures arrondies */
+                border: 1px solid var(--dark-color); /* Bordure sombre */
+                gap: 10px; /* Espacement entre les éléments enfants */
             }
-            
-        }
-            } 
-        }
-        >div:last-of-type{
-                    >div:last-of-type{
-                        color: red;
-                    }
+
+            /* Lorsque le champ a une classe "is-invalid", afficher le message d'erreur */
+            &.is-invalid {
+                ~ .invalid-feedback {
+                    display: initial; /* Afficher le message d'erreur */
                 }
-                
->div:last-of-type{
-    flex-direction: row;
-    gap: 10px;
-    flex-wrap: wrap;
-    input{
-        flex-basis: 4%;}
-        label{
-            flex-basis: 90%;
+            }
+        }
+
+        /* Dernier div avec son propre style */
+        > div:last-of-type {
+            flex-direction: row; /* Disposition en ligne pour le dernier div */
+            gap: 10px; /* Espacement entre les éléments */
+            flex-wrap: wrap; /* Permet de passer à la ligne suivante si nécessaire */
+
+            input {
+                flex-basis: 4%; /* Largeur de base pour les champs input */
+            }
+
+            label {
+                flex-basis: 90%; /* Largeur de base pour les labels */
+            }
+        }
+    }
+
+    /* Style du bouton de soumission */
+    button {
+        padding: 10px; /* Padding autour du texte du bouton */
+        background-color: var(--primary-color); /* Couleur de fond du bouton */
+        color: var(--light-color); /* Couleur du texte du bouton */
+        border: none; /* Supprimer la bordure */
+        border-radius: 5px; /* Bordures arrondies */
+        cursor: pointer; /* Curseur pointeur au survol */
+
+        /* Effet au survol du bouton */
+        &:hover {
+            background-color: #f39c12; /* Changer la couleur de fond au survol */
         }
     }
 }
 
-            }
+/* ----------------------------------------
+   FAQ Section Styling
+---------------------------------------- */
 
-            button{
-                padding: 10px;
-        background-color: var(--primary-color);
-        color: var(--light-color);
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        &:hover{
-            background-color: #f39c12;
-        }
-            }
-       
-        
+/* Style pour la section #faq */
 #faq {
-    margin-inline: 5px;
-    padding-inline: 20px;
-    padding-block: 10px;
-    margin-bottom: 30px;
-    box-shadow: var(--border-shadow);
+    margin-inline: 5px; /* Marge horizontale */
+    padding-inline: 20px; /* Padding horizontal */
+    padding-block: 10px; /* Padding vertical */
+    margin-bottom: 30px; /* Marge inférieure */
+    box-shadow: var(--border-shadow); /* Ombre autour de la section */
+
+    /* Style pour chaque élément FAQ */
     .faq-item {
-        margin-bottom: 15px;
+        margin-bottom: 15px; /* Espacement entre les éléments FAQ */
     }
-    h2{
-        margin-bottom: 10px;
+
+    h2 {
+        margin-bottom: 10px; /* Marge inférieure du titre */
     }
+
+    /* Style pour les boutons de bascule de la FAQ */
     .faq-toggle {
-        background-color: var(--primary-color);
-        color: white;
-        border: none;
-        padding: 10px;
-        width: 100%;
-        text-align: left;
-        cursor: pointer;
-        font-size: 1.1rem;
+        background-color: var(--primary-color); /* Couleur de fond */
+        color: white; /* Couleur du texte */
+        border: none; /* Pas de bordure */
+        padding: 10px; /* Padding autour du texte */
+        width: 100%; /* Prendre toute la largeur */
+        text-align: left; /* Aligner le texte à gauche */
+        cursor: pointer; /* Curseur pointeur au survol */
+        font-size: 1.1rem; /* Taille du texte */
+
+        /* Effet au survol du bouton de la FAQ */
+        &:hover {
+            background-color: #f39c12; /* Changer la couleur de fond au survol */
+        }
     }
-    
-    .faq-toggle:hover {
-        background-color: #f39c12;
-    }
-    
+
+    /* Contenu caché de la FAQ */
     .faq-content {
-        display: none;
-        padding: 10px;
-        border-radius: 5px;
+        display: none; /* Masquer le contenu par défaut */
+        padding: 10px; /* Padding autour du contenu */
+        border-radius: 5px; /* Bordures arrondies */
     }
-    
+
+    /* Style pour les paragraphes dans le contenu FAQ */
     .faq-content p {
-        font-size: 1rem;
+        font-size: 1rem; /* Taille du texte */
     }
 }
 
+/* ----------------------------------------
+   Responsive Design for Medium Screens
+---------------------------------------- */
 
+/* Ajouts spécifiques pour les écrans moyens */
 @media (min-width: 768px) {
-     #contact{
-    form{
-    display: grid;
-    grid-template-columns: 1fr 1fr ;
-    div:nth-last-of-type(2),button{
-        grid-column: 1/-1;
+
+    /* Style pour la section #contact avec grille */
+    #contact {
+        form {
+            display: grid; /* Utiliser une grille pour la disposition */
+            grid-template-columns: 1fr 1fr; /* Deux colonnes égales */
+            
+            /* Élément "div" avant dernier et le bouton sont étendus sur toute la largeur */
+            div:nth-last-of-type(2), button {
+                grid-column: 1 / -1; /* Étendre ces éléments sur toute la largeur de la grille */
+            }
+
+            /* Style pour le bouton */
+            button {
+                width: 20vw; /* Largeur du bouton */
+                justify-self: center; /* Centrer le bouton horizontalement */
+            }
+
+            /* Ajustement de la taille du textarea */
+            textarea {
+                height: 10vh; /* Hauteur du textarea */
+            }
+        }
     }
-    button{
-        width: 20vw;
-        justify-self: center;
-    }
-    textarea{
-        height: 10vh;
-    }
-    
-   }
-}
-#faq{
-    display: grid;
-    grid-template-columns: 1fr 1fr ;
-    gap: 10px;
-    h2{
-        grid-column: 1/-1;
+
+    /* Style pour la section FAQ avec grille */
+    #faq {
+        display: grid; /* Utiliser une grille */
+        grid-template-columns: 1fr 1fr; /* Deux colonnes égales */
+        gap: 10px; /* Espacement entre les éléments */
+        
+        h2 {
+            grid-column: 1 / -1; /* Le titre prend toute la largeur de la grille */
+        }
     }
 }
 
-}
-@media (min-width: 1024px){
-    :root{
-        font-size: 1.01rem;
+/* ----------------------------------------
+   Responsive Design for Large Screens
+---------------------------------------- */
+
+/* Ajustements pour les grands écrans */
+@media (min-width: 1024px) {
+    /* Ajuster la taille de police pour les grands écrans */
+    :root {
+        font-size: 1.01rem; /* Augmenter légèrement la taille de la police */
     }
 }
