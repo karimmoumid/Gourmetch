@@ -266,3 +266,167 @@
         }
     }
 }
+/* ----------------------------------------
+   Impression - Section Infos Générales
+---------------------------------------- */
+@media print {
+    /* Section #infosGenerales */
+    #infosGenerales {
+        margin-inline: 0; /* Enlever la marge horizontale */
+        padding-inline: 0; /* Enlever le padding horizontal */
+        padding-block: 0; /* Enlever le padding vertical */
+        margin-bottom: 0; /* Supprimer la marge inférieure */
+        box-shadow: none; /* Enlever l'ombre */
+
+        /* Style pour les figures à l'intérieur de #infosGenerales */
+        figure {
+            animation: none; /* Enlever l'animation */
+            position: relative; /* Positionnement relatif pour permettre un placement absolu dans figcaption */
+
+            /* Image dans la figure */
+            img {
+                width: 100%; /* Garder l'image pleine largeur */
+                height: auto; /* Ajuster la hauteur automatiquement */
+            }
+
+            /* Légende de la figure */
+            figcaption {
+                font-size: 1rem; /* Réduire la taille du texte pour l'impression */
+                position: static; /* Retour à une position statique */
+                background-color: transparent; /* Enlever le fond sombre */
+                color: black; /* Couleur noire pour le texte */
+                transform: none; /* Enlever la transformation */
+            }
+        }
+
+        /* Style pour les div à l'intérieur de #infosGenerales */
+        div {
+            h3 {
+                font-weight: normal; /* Réduire le poids de la police */
+            }
+
+            h2 {
+                font-size: 1.2rem; /* Réduire la taille de la police */
+                font-weight: normal; /* Poids de la police normal */
+                color: black; /* Couleur noire */
+                text-align: left; /* Alignement à gauche */
+                padding-block: 10px; /* Réduire le padding vertical */
+            }
+
+            p {
+                margin-block: 5px; /* Espacement vertical entre les paragraphes */
+            }
+
+            button {
+                display: none; /* Masquer le bouton à l'impression */
+            }
+        }
+    }
+
+    /* ----------------------------------------
+       Impression - Liste d'Ingrédients
+    ---------------------------------------- */
+    #listeIngr {
+        margin-inline: 0; /* Supprimer la marge horizontale */
+        padding-inline: 0; /* Supprimer le padding horizontal */
+        padding-block: 0; /* Supprimer le padding vertical */
+        margin-bottom: 0; /* Supprimer la marge inférieure */
+        box-shadow: none; /* Supprimer l'ombre */
+    }
+
+    #listeIngr h3 {
+        padding-block: 0; /* Réduire le padding vertical pour le titre */
+    }
+
+    /* Style pour la liste d'ingrédients */
+    #listeIngr ul {
+        display: block; /* Enlever la grille et utiliser une liste verticale */
+        padding-inline: 0; /* Supprimer le padding horizontal */
+        list-style: none; /* Enlever les puces */
+    }
+
+    #listeIngr li {
+        margin-bottom: 10px; /* Ajouter un espacement entre chaque ingrédient */
+    }
+
+    /* ----------------------------------------
+       Impression - Préparation
+    ---------------------------------------- */
+    #preparation {
+        margin-inline: 0; /* Supprimer la marge horizontale */
+        padding-inline: 0; /* Supprimer le padding horizontal */
+        padding-block: 0; /* Supprimer le padding vertical */
+        margin-bottom: 0; /* Supprimer la marge inférieure */
+        box-shadow: none; /* Supprimer l'ombre */
+    }
+
+    /* Liste ordonnée dans la section préparation */
+    #preparation ol {
+        padding-inline: 0; /* Supprimer le padding horizontal */
+        list-style: decimal; /* Garde les numéros pour les étapes */
+    }
+
+    #preparation li {
+        margin-bottom: 10px; /* Ajouter un espacement entre chaque étape */
+    }
+
+    /* ----------------------------------------
+       Impression - Suggestions
+    ---------------------------------------- */
+    #suggestion {
+        margin-inline: 0; /* Supprimer la marge horizontale */
+        padding-inline: 0; /* Supprimer le padding horizontal */
+        padding-block: 0; /* Supprimer le padding vertical */
+        margin-bottom: 0; /* Supprimer la marge inférieure */
+        box-shadow: none; /* Supprimer l'ombre */
+    }
+
+    /* Suppression de la grille dans la section suggestion */
+    #suggestion article {
+        margin-block: 10px; /* Ajouter un espacement vertical */
+        box-shadow: none; /* Enlever l'ombre */
+        margin-inline: 0; /* Supprimer la marge horizontale */
+        border-radius: 0; /* Supprimer les bordures arrondies */
+    }
+
+    /* Suppression des images et légendes */
+    #suggestion article figure {
+        display: none; /* Masquer les images dans la section suggestion */
+    }
+
+    /* Suppression des div et boutons */
+    #suggestion article div {
+        display: none; /* Masquer les éléments de type div */
+    }
+
+    /* Boutons dans la section #suggestion */
+    #suggestion article button {
+        display: none; /* Masquer les boutons à l'impression */
+    }
+    
+    /* ----------------------------------------
+       Impression - Mise en page générale
+    ---------------------------------------- */
+    /* Suppression des styles de mise en page spécifiques au site web */
+    body {
+        font-size: 12pt; /* Taille de police adaptée pour l'impression */
+        line-height: 1.5; /* Hauteur de ligne plus espacée pour la lisibilité */
+        color: black; /* Texte noir */
+        background-color: white; /* Fond blanc */
+    }
+
+    /* Suppression du padding de la page */
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Masquer tous les éléments qui ne sont pas nécessaires à l'impression */
+    header, footer {
+        display: none; /* Masquer l'entête et le pied de page */
+    }
+
+    button {
+        display: none; /* Masquer les boutons */
+    }
+}
