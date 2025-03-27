@@ -1,235 +1,234 @@
-
 #filtre {
-    margin-inline: 5px;
-    padding-inline: 20px;
-    padding-block: 10px;
-    margin-bottom: 30px;
-    box-shadow: var(--border-shadow);
-    text-align: center;
+    margin-inline: 5px; /* Marge horizontale */
+    padding-inline: 20px; /* Padding horizontal */
+    padding-block: 10px; /* Padding vertical */
+    margin-bottom: 30px; /* Marge inférieure */
+    box-shadow: var(--border-shadow); /* Ombre autour du filtre */
+    text-align: center; /* Centrer le texte */
 
     form {
-
         input,
         button {
-            width: 100%;
-            margin-block: 4px;
+            width: 100%; /* Largeur des éléments à 100% */
+            margin-block: 4px; /* Espacement vertical entre les éléments */
         }
 
         input {
-            padding-block: 5px;
+            padding-block: 5px; /* Padding vertical pour les champs de saisie */
         }
 
         button {
-            background-color: var(--primary-color);
-            border: 0;
-            border-radius: 4px;
-            color: var(--light-color);
-            color: var(--light-color);
-            padding-block: 2px;
+            background-color: var(--primary-color); /* Fond du bouton */
+            border: 0; /* Pas de bordure */
+            border-radius: 4px; /* Coins arrondis */
+            color: var(--light-color); /* Couleur du texte */
+            padding-block: 2px; /* Padding vertical pour le bouton */
         }
     }
 
     article {
-        padding-block: 10px;
-        background-color: var(--secondary-color);
-        margin-block: 10px;
-        text-align: left;
-        padding-left: 10px;
+        padding-block: 10px; /* Padding vertical */
+        background-color: var(--secondary-color); /* Fond de l'article */
+        margin-block: 10px; /* Marge verticale entre les articles */
+        text-align: left; /* Aligner le texte à gauche */
+        padding-left: 10px; /* Padding à gauche */
 
         li {
-            display: flex;
-            list-style-type: none;
-            padding-block: 5px;
-            gap: 10px;
+            display: flex; /* Utiliser flexbox pour les éléments de la liste */
+            list-style-type: none; /* Retirer les puces des éléments de liste */
+            padding-block: 5px; /* Espacement vertical pour les éléments de liste */
+            gap: 10px; /* Espacement entre les éléments de la liste */
         }
-
     }
 }
 
 #recette {
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* Marge inférieure pour le conteneur de recettes */
 
     article {
-        position: relative;
-        margin-block: 20px;
-        box-shadow: var(--border-shadow);
-        margin-inline: 5px;
-        border-radius: 10px;
+        position: relative; /* Positionner relativement l'article */
+        margin-block: 20px; /* Marge verticale entre les articles */
+        box-shadow: var(--border-shadow); /* Ombre autour de l'article */
+        margin-inline: 5px; /* Marge horizontale */
+        border-radius: 10px; /* Coins arrondis de l'article */
 
         figure {
             img {
-                width: 100%;
-                aspect-ratio: 1.5/1;
-                object-fit: cover;
-                object-position: 50% 75%;
-                border-top-left-radius: 10px;
-                border-top-right-radius: 10px;
+                width: 100%; /* Largeur de l'image à 100% */
+                aspect-ratio: 1.5/1; /* Ratio d'aspect de l'image */
+                object-fit: cover; /* Recouvrir l'espace disponible tout en préservant les proportions */
+                object-position: 50% 75%; /* Position de l'image à 50% horizontalement et 75% verticalement */
+                border-top-left-radius: 10px; /* Coins arrondis pour le haut à gauche */
+                border-top-right-radius: 10px; /* Coins arrondis pour le haut à droite */
             }
 
             figcaption {
-                padding-left: 20px;
-                font-size: 2rem;
+                padding-left: 20px; /* Padding à gauche pour la légende */
+                font-size: 2rem; /* Taille de la police pour la légende */
             }
         }
 
         div {
             &:first-of-type {
-                background-color: var(--secondary-color);
-                padding: 10px;
-                position: absolute;
-                top: 10%;
-                right: 0%;
-                transform: translate(-50%, -50%);
-                border-radius: 100%;
-                img{
-                    cursor: pointer;
+                background-color: var(--secondary-color); /* Fond de la première div */
+                padding: 10px; /* Padding interne */
+                position: absolute; /* Positionnement absolu pour la div */
+                top: 10%; /* Positionnement à 10% du haut */
+                right: 0%; /* Positionnement à droite */
+                transform: translate(-50%, -50%); /* Centrer la div */
+                border-radius: 100%; /* Coins arrondis pour une forme circulaire */
+                
+                img {
+                    cursor: pointer; /* Le curseur devient un pointeur sur l'image */
                 }
             }
 
             &:last-of-type {
-                padding-left: 20px;
-                display: flex;
-                gap: 10px;
-                margin-block: 10px;
+                padding-left: 20px; /* Padding à gauche pour la dernière div */
+                display: flex; /* Utilisation de flexbox pour la disposition des éléments */
+                gap: 10px; /* Espacement entre les éléments */
+                margin-block: 10px; /* Marge verticale entre les éléments */
 
                 p {
-                    padding: 5px;
-                    padding-inline: 9px;
-                    color: var(--light-color);
-                    border-radius: 15px;
+                    padding: 5px; /* Padding autour du texte */
+                    padding-inline: 9px; /* Padding horizontal */
+                    color: var(--light-color); /* Couleur du texte */
+                    border-radius: 15px; /* Coins arrondis pour les paragraphes */
 
                     &:first-of-type {
-                        background-color: var(--primary-color);
+                        background-color: var(--primary-color); /* Fond pour le premier paragraphe */
                     }
 
                     &:nth-last-of-type(2) {
-                        background-color: var(--tertiary-color);
+                        background-color: var(--tertiary-color); /* Fond pour l'avant-dernier paragraphe */
                     }
 
                     &:last-of-type {
-                        background-color: var(--quaternary-color);
+                        background-color: var(--quaternary-color); /* Fond pour le dernier paragraphe */
                     }
                 }
             }
         }
 
         button {
-            margin-inline: 20px;
-            width: calc(100% - 40px);
-            background-color: var(--primary-color);
-            color: var(--light-color);
-            a{
-                display: block;
-                color: var(--light-color);
-                text-decoration: none;
-                width: 100%;
-                height: 100%;
+            margin-inline: 20px; /* Marge horizontale pour le bouton */
+            width: calc(100% - 40px); /* Largeur du bouton avec une marge de 20px de chaque côté */
+            background-color: var(--primary-color); /* Fond du bouton */
+            color: var(--light-color); /* Couleur du texte dans le bouton */
+            
+            a {
+                display: block; /* Lien occupa toute la largeur du bouton */
+                color: var(--light-color); /* Couleur du texte du lien */
+                text-decoration: none; /* Retirer le soulignement du lien */
+                width: 100%; /* Largeur du lien */
+                height: 100%; /* Hauteur du lien */
             }
-            border: 0;
-            font-size: 1.5rem;
-            padding-block: 10px;
-            margin-bottom: 10px;
-            border-radius: 5px;
+
+            border: 0; /* Pas de bordure */
+            font-size: 1.5rem; /* Taille de la police */
+            padding-block: 10px; /* Padding vertical */
+            margin-bottom: 10px; /* Marge inférieure */
+            border-radius: 5px; /* Coins arrondis */
         }
     }
 }
 
 footer {
     >div {
-        padding-bottom: 10px;
-        padding-inline: 10px;
-        box-shadow: var(--border-shadow);
-        margin-inline: 5px;
-        border-radius: 10px;
+        padding-bottom: 10px; /* Padding inférieur */
+        padding-inline: 10px; /* Padding horizontal */
+        box-shadow: var(--border-shadow); /* Ombre autour du footer */
+        margin-inline: 5px; /* Marge horizontale */
+        border-radius: 10px; /* Coins arrondis */
 
         h3 {
-            color: var(--primary-color);
-            padding-block: 5px;
+            color: var(--primary-color); /* Couleur du titre */
+            padding-block: 5px; /* Padding vertical autour du titre */
 
             a {
-                color: var(--primary-color);
-                text-decoration: none;
+                color: var(--primary-color); /* Couleur des liens */
+                text-decoration: none; /* Retirer le soulignement du lien */
             }
         }
 
         li {
-            list-style-type: none;
-            padding-block: 4px;
+            list-style-type: none; /* Retirer les puces des listes */
+            padding-block: 4px; /* Espacement vertical pour les éléments de la liste */
 
             a {
-                color: #111;
-                text-decoration: none;
+                color: #111; /* Couleur du lien */
+                text-decoration: none; /* Retirer le soulignement du lien */
             }
         }
-
     }
 
     >p {
-        text-align: center;
-        padding-block: 10px;
+        text-align: center; /* Centrer le texte */
+        padding-block: 10px; /* Padding vertical */
     }
 }
 
 @media (min-width: 768px) {
     #filtre {
         form {
-            display: flex;
+            display: flex; /* Disposition en flexbox pour le formulaire */
 
             input {
-                flex: 1;
-                border-top-left-radius: 5px;
-                border-bottom-left-radius: 5px;
-                border-right: 0;
+                flex: 1; /* L'input occupe toute la largeur */
+                border-top-left-radius: 5px; /* Coins arrondis pour l'input */
+                border-bottom-left-radius: 5px; /* Coins arrondis pour l'input */
+                border-right: 0; /* Pas de bordure à droite de l'input */
             }
 
             button {
-                flex: 0.3;
-                border-top-left-radius: 0;
-                border-bottom-left-radius: 0;
+                flex: 0.3; /* Le bouton prend 30% de l'espace */
+                border-top-left-radius: 0; /* Pas de coins arrondis à gauche du bouton */
+                border-bottom-left-radius: 0; /* Pas de coins arrondis en bas à gauche du bouton */
             }
         }
 
         article {
             h3 {
-                margin-block: 5px;
+                margin-block: 5px; /* Espacement vertical autour des titres dans les articles */
             }
 
             ul {
-                display: flex;
-                gap: 15px;
+                display: flex; /* Disposition en flexbox pour les éléments de la liste */
+                gap: 15px; /* Espacement entre les éléments de la liste */
             }
         }
     }
 
     #recette {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 10px;
+        display: grid; /* Disposition en grille pour les recettes */
+        grid-template-columns: 1fr 1fr; /* Créer 2 colonnes égales */
+        gap: 10px; /* Espacement entre les éléments de la grille */
     }
-
 }
 
 @media(min-width: 1024px) {
-    :root{
-        font-size: 1.01rem;
+    :root {
+        font-size: 1.01rem; /* Augmenter légèrement la taille de la police */
     }
+
     #filtre {
-        display: grid;
-        grid-template-columns: repeat(6, 1fr);
-        gap: 10px;
+        display: grid; /* Disposition en grille pour le filtre */
+        grid-template-columns: repeat(6, 1fr); /* Créer 6 colonnes égales */
+        gap: 10px; /* Espacement entre les éléments de la grille */
+
         form {
-            grid-column: 1 / -1;
+            grid-column: 1 / -1; /* Le formulaire occupe toute la largeur de la grille */
         }
 
         article {
             ul {
-                flex-direction: column;
-                gap: 4px;
-                
+                flex-direction: column; /* Disposer les éléments de la liste en colonne */
+                gap: 4px; /* Espacement entre les éléments */
             }
         }
     }
-    #recette{
-        grid-template-columns: repeat(3, 1fr);
+
+    #recette {
+        grid-template-columns: repeat(3, 1fr); /* Créer 3 colonnes égales */
     }
 }

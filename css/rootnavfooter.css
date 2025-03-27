@@ -1,24 +1,27 @@
 :root {
-    font-size: 10px;
-    --primary-color: #E67F22;
-    --secondary-color: #F9F9F9;
-    --tertiary-color: #2DCD73;
-    --quaternary-color: #4293D2;
-    --dark-color: #111;
-    --light-color: #FFFFFF;
-    --font-primary: #767B7F;
-    --border-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: 10px; /* Définir la taille de police de base */
+    --primary-color: #E67F22; /* Couleur primaire */
+    --secondary-color: #F9F9F9; /* Couleur secondaire */
+    --tertiary-color: #2DCD73; /* Couleur tertiaire */
+    --quaternary-color: #4293D2; /* Couleur quaternaire */
+    --dark-color: #111; /* Couleur sombre */
+    --light-color: #FFFFFF; /* Couleur claire */
+    --font-primary: #767B7F; /* Couleur de la police principale */
+    --border-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre des bordures */
 }
 
-figcaption{
-    font-weight: 700;
+figcaption {
+    font-weight: 700; /* Appliquer un poids de police gras */
 }
+
 * {
-    font-family: "Roboto",sans-serif;
-    margin: 0px;
-    padding: 0;
-    box-sizing: border-box;
+    font-family: "Roboto", sans-serif; /* Utilisation de la police Roboto */
+    margin: 0px; /* Retirer les marges par défaut */
+    padding: 0; /* Retirer le padding par défaut */
+    box-sizing: border-box; /* Inclure les bordures et paddings dans les dimensions des éléments */
 }
+
+/* Style pour le thème sombre */
 .dark {
     --primary-color: #1e88e5; 
     --secondary-color: #333333; 
@@ -26,210 +29,226 @@ figcaption{
     --quaternary-color: #888888; 
     --light-color: #ffffff; 
     --border-shadow: 0 0 10px rgba(255, 255, 255, 0.786); 
-    background-color: #111;
-    p,div, li, h2, a, figcaption{color: white;}
-    h3{
-        color: var(--primary-color);
-        a{
-        color:var(--primary-color) ;
-    }}
-    nav{
-        background-color: #111;
+    background-color: #111; /* Fond sombre */
+
+    p, div, li, h2, a, figcaption {
+        color: white; /* Texte en blanc */
     }
-    @media (max-width: 768px){
-.nav-menu{
-    background-color: var(--primary-color);
-}
+
+    h3 {
+        color: var(--primary-color); /* Couleur du texte en h3 */
+        
+        a {
+            color: var(--primary-color); /* Couleur des liens dans h3 */
+        }
+    }
+
+    nav {
+        background-color: #111; /* Fond sombre pour la navigation */
+    }
+
+    /* Style pour les menus sur mobile */
+    @media (max-width: 768px) {
+        .nav-menu {
+            background-color: var(--primary-color); /* Changer la couleur du fond du menu */
+        }
     }
 }
-.show{
+
+/* Classe pour afficher un élément en flex */
+.show {
     display: flex;
 }
 
 header {
-    margin-inline: 5px;
-    padding-inline: 20px;
-    display: flex;
-    justify-content: space-between;
-    padding-block: 10px;
-    margin-bottom: 30px;
-    position: relative;
-
-    box-shadow: var(--border-shadow);
+    margin-inline: 5px; /* Marge horizontale */
+    padding-inline: 20px; /* Padding horizontal */
+    display: flex; /* Utilisation de flexbox */
+    justify-content: space-between; /* Espacer les éléments à gauche et à droite */
+    padding-block: 10px; /* Padding vertical */
+    margin-bottom: 30px; /* Marge inférieure */
+    position: relative; /* Positionnement relatif pour les éléments positionnés dans le header */
+    box-shadow: var(--border-shadow); /* Ombre autour de l'en-tête */
 
     >div {
-        display: flex;
-        gap: 15px;
+        display: flex; /* Flexbox pour les éléments internes */
+        gap: 15px; /* Espacement entre les éléments enfants */
 
         div {
-            width: 40px;
-            height: 40px;
-            border-radius: 100%;
-            justify-items: center;
-            align-content: center;
+            width: 40px; /* Largeur fixe des divs internes */
+            height: 40px; /* Hauteur fixe */
+            border-radius: 100%; /* Coins arrondis pour une forme circulaire */
+            justify-items: center; /* Centrer les éléments à l'intérieur */
+            align-content: center; /* Centrer les éléments à l'intérieur */
         }
 
+        /* Premier bloc dans le header */
         &:first-of-type {
-
             div {
-                background-color: var(--primary-color);
-align-self: center;
+                background-color: var(--primary-color); /* Couleur de fond de l'élément */
+                align-self: center; /* Alignement vertical au centre */
+                
                 p {
-                    color: var(--light-color);
-                    font-weight: 900;
-                    font-size: 1.6rem;
+                    color: var(--light-color); /* Couleur du texte */
+                    font-weight: 900; /* Poids du texte */
+                    font-size: 1.6rem; /* Taille du texte */
                 }
             }
-            h1{
-            align-self: center;
+            h1 {
+                align-self: center; /* Alignement vertical du titre */
             }
         }
 
+        /* Deuxième bloc dans le header */
         &:last-of-type {
             div {
-                background-color: var(--secondary-color);
-                text-align: center;
-                img{
-                    cursor: pointer;
+                background-color: var(--secondary-color); /* Couleur de fond secondaire */
+                text-align: center; /* Centrer le texte dans le div */
+                
+                img {
+                    cursor: pointer; /* Le curseur devient un pointeur lors du survol de l'image */
                 }
             }
-            >img{
-                width: 40px;
-                aspect-ratio: 1/1;
-                cursor: pointer;
+
+            >img {
+                width: 40px; /* Largeur de l'image */
+                aspect-ratio: 1/1; /* Ratio de l'image carré */
+                cursor: pointer; /* Le curseur devient un pointeur lors du survol de l'image */
             }
         }
     }
 
-
     h1 {
-        color: var(--primary-color);
-        font-weight: 900;
-        font-size: 3rem;
-        margin: 0;
-
+        color: var(--primary-color); /* Couleur du titre */
+        font-weight: 900; /* Poids du texte */
+        font-size: 3rem; /* Taille du texte */
+        margin: 0; /* Retirer la marge par défaut */
     }
 
     nav {
-        display: none;
-        position: absolute;
-        top: 100%;
-        right: 0;
-        background-color: var(--primary-color);
-        border-top: none;
-        z-index: 66;
+        display: none; /* Cacher la navigation par défaut */
+        position: absolute; /* Position absolue pour la navigation */
+        top: 100%; /* Positionner la navigation juste sous le header */
+        right: 0; /* Aligner à droite */
+        background-color: var(--primary-color); /* Fond de la navigation */
+        border-top: none; /* Pas de bordure au sommet */
+        z-index: 66; /* Priorité de superposition de la navigation */
 
         ul {
-            width: 40vw;
-            padding-block: 10px;
-            padding-left: 10px;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-
-
+            width: 40vw; /* Largeur de la liste */
+            padding-block: 10px; /* Padding vertical */
+            padding-left: 10px; /* Padding gauche */
+            display: flex; /* Utiliser flexbox pour la disposition */
+            flex-direction: column; /* Disposer les éléments en colonne */
+            gap: 10px; /* Espacement entre les éléments */
+            
             li {
-                list-style: none;
+                list-style: none; /* Retirer les puces des listes */
 
                 a {
-                    text-decoration: none;
-                    color: var(--light-color);
-                    font-size: 1.2rem;
+                    text-decoration: none; /* Retirer le soulignement des liens */
+                    color: var(--light-color); /* Couleur des liens */
+                    font-size: 1.2rem; /* Taille de la police */
                 }
             }
         }
     }
 }
+
 footer {
     >div {
-        padding-bottom: 10px;
-        padding-inline: 10px;
-        box-shadow: var(--border-shadow);
-        margin-inline: 5px;
-        border-radius: 10px;
+        padding-bottom: 10px; /* Padding inférieur */
+        padding-inline: 10px; /* Padding horizontal */
+        box-shadow: var(--border-shadow); /* Ombre autour du footer */
+        margin-inline: 5px; /* Marge horizontale */
+        border-radius: 10px; /* Bordures arrondies */
 
         h3 {
-            color: var(--primary-color);
-            padding-block: 5px;
-
+            color: var(--primary-color); /* Couleur du titre */
+            padding-block: 5px; /* Padding vertical */
+            
             a {
-                color: var(--primary-color);
-                text-decoration: none;
-                &:hover{
-                    color: var(--quaternary-color);
+                color: var(--primary-color); /* Couleur des liens */
+                text-decoration: none; /* Retirer le soulignement des liens */
+                
+                &:hover {
+                    color: var(--quaternary-color); /* Couleur au survol */
                 }
             }
         }
 
         li {
-            list-style-type: none;
-            padding-block: 4px;
-
+            list-style-type: none; /* Retirer les puces des listes */
+            padding-block: 4px; /* Padding vertical */
+            
             a {
-                color: #111;
-                text-decoration: none;
-                &:hover{
-                    color: var(--primary-color);
+                color: #111; /* Couleur du lien */
+                text-decoration: none; /* Retirer le soulignement des liens */
+                
+                &:hover {
+                    color: var(--primary-color); /* Couleur au survol */
                 }
             }
         }
-
     }
 
     >p {
-        text-align: center;
-        padding-block: 10px;
+        text-align: center; /* Centrer le texte */
+        padding-block: 10px; /* Padding vertical */
     }
 }
+
 @media (min-width: 768px) {
-    
     footer {
         >div {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            
+            display: grid; /* Utiliser une grille pour le footer */
+            grid-template-columns: 1fr 1fr; /* Créer 2 colonnes égales */
         }
     }
 }
 
 @media(min-width: 1024px) {
-    header{
+    header {
         >div {
-            &:first-of-type{
-                flex: 1;
+            &:first-of-type {
+                flex: 1; /* Premier bloc prend 1 part de l'espace */
             }
-            &:last-of-type{
-                justify-content: space-between;
-                flex: 1.6;
+            &:last-of-type {
+                justify-content: space-between; /* Espacer les éléments à gauche et à droite */
+                flex: 1.6; /* Dernier bloc prend 1.6 parts de l'espace */
             }
-            >img{
-            display: none;
+            >img {
+                display: none; /* Masquer l'image sur grand écran */
             }
         }
-        nav{
-            background-color: var(--light-color);
-            
-            display: flex;
-            position: relative;
-            top: 0;
-            ul{
-            flex-direction: row;
-            justify-content: space-between;
-            padding-inline: 10px;
-            li {
+
+        nav {
+            background-color: var(--light-color); /* Fond clair pour la navigation */
+            display: flex; /* Utiliser flexbox pour la navigation */
+            position: relative; /* Positionner la navigation normalement */
+            top: 0; /* Remettre à zéro la position verticale */
+
+            ul {
+                flex-direction: row; /* Disposer les éléments de la navigation en ligne */
+                justify-content: space-between; /* Espacer les éléments */
+                padding-inline: 10px; /* Padding horizontal */
                 
-            a{
-                color: var(--dark-color);
-                font-weight: 800;
-            }
-            &:hover{
-                padding: 4px;
-                background-color: var(--secondary-color);
-                a{color: var(--primary-color);}
-            }
-        }
+                li {
+                    a {
+                        color: var(--dark-color); /* Couleur des liens */
+                        font-weight: 800; /* Poids du texte */
+                    }
+
+                    &:hover {
+                        padding: 4px; /* Padding au survol */
+                        background-color: var(--secondary-color); /* Fond secondaire au survol */
+                        
+                        a {
+                            color: var(--primary-color); /* Couleur des liens au survol */
+                        }
+                    }
+                }
             }
         }
     }
-    
 }
