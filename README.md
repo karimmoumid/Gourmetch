@@ -10,7 +10,6 @@ git clone https://github.com/votre-utilisateur/gourmetech.git
 
 Allez dans le répertoire du projet :
 ```bash
-Copier
 cd gourmetech
 ```
 ## 3. Ouvrir le projet dans votre éditeur
