@@ -210,6 +210,9 @@ footer {
 }
 
 @media(min-width: 1024px) {
+    :root{
+        font-size: 1.01rem;
+    }
     #filtre {
         display: grid;
         grid-template-columns: repeat(6, 1fr);

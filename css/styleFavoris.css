@@ -90,6 +90,9 @@
 }
 
 @media(min-width: 1024px) {
+    :root{
+        font-size: 1.01rem;
+    }
     #favorite{
         div{
             article{

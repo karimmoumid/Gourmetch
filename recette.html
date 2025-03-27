@@ -5,13 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GourmeTech</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/rootnavfooter.css">
     <link rel="stylesheet" href="css/styleRecette.css">
     <script src="js/navscript.js" defer></script>
     <script src="js/scriptrecette.js" defer></script>
 </head>
-sd
 <body>
     <header>
         <div>
@@ -41,13 +44,15 @@ sd
                 <figcaption>TAGINE</figcaption>
             </figure>
             <div>
+                <h2>Recette de tagine :</h2>
                 <h3>Information génerales :</h3>
-                <h2>Recette de tagine</h2>
                 <p><span>Catégorie :</span> Plat</p>
                 <p><span>Temps :</span> 45min</p>
                 <p><span>Difficulté:</span> moyen</p>
                 <p><span>Nombre de personnes:</span> 4 personnes</p>
-                <button data-id="2" data-diff="moyen" data-temps="moyen" data-categ="plat" data-titre="Tagine" data-imagesrc="assets/images/sour-moha-5t2SP3vQz28-unsplash.jpg" role="button">Ajouter aux favoris</button>
+                <button data-id="2" data-diff="Moyen" data-temps="45min" data-categ="Plat" data-titre="Tagine"
+                    data-imagesrc="assets/images/sour-moha-5t2SP3vQz28-unsplash.jpg" role="button">Ajouter aux
+                    favoris</button>
             </div>
         </section>
         <section id="listeIngr">
@@ -146,39 +151,42 @@ sd
         <section id="suggestion">
             <h3>Autres suggestions :</h3>
             <div>
-            <article>
-                <figure>
-                    <img src="assets/images/diliara-garifullina-D7X-GMeTV7U-unsplash.jpg" alt="tarte aux pommes">
-                    <figcaption>Tarte aux pommes</figcaption>
-                </figure>
-                <div>
-                    <img src="assets/icons/mdi_heart (1).png" alt="icon de coeur pour rajouter aus favoris"
-                        role="button">
-                </div>
-                <div>
-                    <p>Dessert</p>
-                    <p>6O min</p>
-                    <p>Facile</p>
-                </div>
-                <button role="button">Voir recette</button>
-            </article>
-            <article>
-                <figure>
-                    <img src="assets/images/louis-hansel-k2ZCm7LCj8E-unsplash.jpg" alt="Couscous">
-                    <figcaption>Couscous</figcaption>
-                </figure>
-                <div>
-                    <img src="assets/icons/mdi_heart (1).png" alt="icon de coeur pour rajouter aus favoris"
-                        role="button">
-                </div>
-                <div>
-                    <p>Entrée</p>
-                    <p>30 min</p>
-                    <p>Difficile</p>
-                </div>
-                <button role="button">Voir recette</button>
-            </article>
-        </div>
+                <article>
+                    <figure>
+                        <img src="assets/images/diliara-garifullina-D7X-GMeTV7U-unsplash.jpg" alt="tarte aux pommes">
+                        <figcaption>Tarte aux pommes</figcaption>
+                    </figure>
+                    <div>
+                        <img src="assets/icons/mdi_heart (1).png" alt="icon de coeur pour rajouter aus favoris"
+                            role="button" data-id="1" data-diff="Facile" data-temps="60min" data-categ="Dessert"
+                            data-titre="Tarte aux pommes"
+                            data-imagesrc="assets/images/diliara-garifullina-D7X-GMeTV7U-unsplash.jpg">
+                    </div>
+                    <div>
+                        <p>Dessert</p>
+                        <p>6O min</p>
+                        <p>Facile</p>
+                    </div>
+                    <button role="button">Voir recette</button>
+                </article>
+                <article>
+                    <figure>
+                        <img src="assets/images/louis-hansel-k2ZCm7LCj8E-unsplash.jpg" alt="Couscous">
+                        <figcaption>Couscous</figcaption>
+                    </figure>
+                    <div>
+                        <img src="assets/icons/mdi_heart (1).png" alt="icon de coeur pour rajouter aus favoris"
+                            role="button" data-id="3" data-diff="Difficile" data-temps="30min" data-categ="Entrée"
+                            data-titre="Couscous" data-imagesrc="assets/images/louis-hansel-k2ZCm7LCj8E-unsplash.jpg">
+                    </div>
+                    <div>
+                        <p>Entrée</p>
+                        <p>30 min</p>
+                        <p>Difficile</p>
+                    </div>
+                    <button role="button">Voir recette</button>
+                </article>
+            </div>
         </section>
 
     </main>

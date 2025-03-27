@@ -1,4 +1,3 @@
-
 const checkboxes = document.querySelectorAll('#filtre input[type="checkbox"]');
 const recettes = document.querySelectorAll('#recette article');
 let articlesListe = JSON.parse(localStorage.getItem("Liste des favorites")) ?? [];

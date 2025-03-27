@@ -120,7 +120,7 @@ h2{
 
 
 @media (min-width: 768px) {
-   #contact{
+     #contact{
     form{
     display: grid;
     grid-template-columns: 1fr 1fr ;
@@ -146,4 +146,9 @@ h2{
     }
 }
 
+}
+@media (min-width: 1024px){
+    :root{
+        font-size: 1.01rem;
+    }
 }

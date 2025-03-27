@@ -26,9 +26,11 @@ div{
         font-weight: 800;
     }
 h2{
-    font-size: 1.3rem;
-    font-weight: 600;
+    font-size: 1.6rem;
+    font-weight: 800;
     color: var(--primary-color);
+    text-align: center;
+    padding-block: 20px;
 }
 p{
     margin-block: 5px;
@@ -179,10 +181,11 @@ button{
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 10px;
+        column-gap: 25px;
     }
 }
 #suggestion{
-    div{
+    >div{
     display: grid;
     grid-template-columns: 1fr 1fr;
     }
@@ -190,6 +193,9 @@ button{
 }
 
 @media(min-width: 1024px) {
+    :root{
+        font-size: 1.01rem;
+    }
     #listeIngr{
         ul{
             grid-template-columns: repeat(4,1fr);
