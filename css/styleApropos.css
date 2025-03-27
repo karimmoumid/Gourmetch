@@ -1,202 +1,153 @@
-/* ----------------------------------------
-   General Styling for Sections
----------------------------------------- */
-
-/* Style pour la section #information */
-#information {
-    margin-inline: 5px; /* Marge horizontale */
-    padding-inline: 20px; /* Padding horizontal */
-    padding-block: 10px; /* Padding vertical */
-    margin-bottom: 30px; /* Marge inférieure */
-    box-shadow: var(--border-shadow); /* Ombre autour de la section */
-
-    /* Espacement autour des titres et paragraphes */
-    h2, p {
-        margin-block: 5px; /* Marge verticale pour les éléments h2 et p */
-    }
-}
-
-/* Style pour la section #contact */
 #contact {
-    margin-inline: 5px;
-    padding-inline: 20px;
-    padding-block: 10px;
-    margin-bottom: 30px;
-    box-shadow: var(--border-shadow); /* Ombre autour de la section */
+    margin-inline: 5px; /* Marge de 5px sur les côtés (gauche et droite) */
+    padding-inline: 20px; /* Padding de 20px à gauche et à droite */
+    padding-block: 10px; /* Padding de 10px en haut et en bas */
+    margin-bottom: 30px; /* Marge de 30px en bas */
+    box-shadow: var(--border-shadow); /* Ombre portée autour du conteneur, utilisant une variable CSS */
 
-    /* Style spécifique pour le titre h2 */
     h2 {
-        text-align: center; /* Centrer le titre */
-        margin-bottom: 10px; /* Marge inférieure */
+        text-align: center; /* Centre le texte du titre */
+        margin-bottom: 10px; /* Marge de 10px en bas du titre */
     }
 
-    /* Formulaire de contact */
     form {
-        display: flex; /* Utilisation de flexbox */
-        flex-direction: column; /* Disposition en colonne */
-        gap: 10px; /* Espacement entre les éléments du formulaire */
+        display: flex; /* Utilisation de Flexbox pour le formulaire */
+        flex-direction: column; /* Les éléments du formulaire sont disposés en colonne */
+        gap: 10px; /* Espace de 10px entre les éléments du formulaire */
 
-        /* Feedback d'erreur */
         .invalid-feedback {
-            color: red; /* Couleur du texte d'erreur */
-            display: none; /* Masquer le message d'erreur par défaut */
+            color: red; /* Le texte des messages d'erreur sera en rouge */
+            display: none; /* Les messages d'erreur sont cachés par défaut */
         }
 
-        /* Style pour les div contenant les champs de formulaire */
         div {
-            display: flex; /* Flexbox pour la disposition des éléments */
-            flex-direction: column; /* Disposition en colonne */
+            display: flex; /* Utilisation de Flexbox pour les div internes */
+            flex-direction: column; /* Les éléments à l'intérieur des div sont en colonne */
 
-            /* Style pour les champs de saisie (input et textarea) */
             input:not([type=checkbox]), textarea {
-                padding: 10px; /* Padding à l'intérieur des champs */
-                border-radius: 5px; /* Bordures arrondies */
-                border: 1px solid var(--dark-color); /* Bordure sombre */
-                gap: 10px; /* Espacement entre les éléments enfants */
-            }
+                padding: 10px; /* Padding de 10px à l'intérieur des champs de saisie et des zones de texte */
+                border-radius: 5px; /* Coins arrondis des champs */
+                border: 1px solid var(--dark-color); /* Bordure sombre autour des champs */
+                gap: 10px; /* Espace de 10px entre les éléments à l'intérieur des champs */
 
-            /* Lorsque le champ a une classe "is-invalid", afficher le message d'erreur */
-            &.is-invalid {
-                ~ .invalid-feedback {
-                    display: initial; /* Afficher le message d'erreur */
+                &.is-invalid {
+                    ~ .invalid-feedback {
+                        display: initial; /* Affiche le message d'erreur si le champ a la classe "is-invalid" */
+                    }
                 }
             }
         }
 
-        /* Dernier div avec son propre style */
-        > div:last-of-type {
-            flex-direction: row; /* Disposition en ligne pour le dernier div */
-            gap: 10px; /* Espacement entre les éléments */
-            flex-wrap: wrap; /* Permet de passer à la ligne suivante si nécessaire */
+        >div:last-of-type {
+            >div:last-of-type {
+                color: red; /* Applique une couleur rouge au dernier élément si une erreur est présente */
+            }
+        }
+
+        >div:last-of-type {
+            flex-direction: row; /* Change l'orientation en ligne pour le dernier div */
+            gap: 10px; /* Espace de 10px entre les éléments */
+            flex-wrap: wrap; /* Permet aux éléments de se répartir sur plusieurs lignes si nécessaire */
 
             input {
-                flex-basis: 4%; /* Largeur de base pour les champs input */
+                flex-basis: 4%; /* Le champ input occupe 4% de la largeur du conteneur */
             }
 
             label {
-                flex-basis: 90%; /* Largeur de base pour les labels */
+                flex-basis: 90%; /* Le label occupe 90% de la largeur du conteneur */
             }
         }
     }
 
-    /* Style du bouton de soumission */
     button {
-        padding: 10px; /* Padding autour du texte du bouton */
-        background-color: var(--primary-color); /* Couleur de fond du bouton */
-        color: var(--light-color); /* Couleur du texte du bouton */
-        border: none; /* Supprimer la bordure */
-        border-radius: 5px; /* Bordures arrondies */
-        cursor: pointer; /* Curseur pointeur au survol */
+        padding: 10px; /* Padding de 10px à l'intérieur du bouton */
+        background-color: var(--primary-color); /* Utilisation de la couleur primaire pour le fond du bouton */
+        color: var(--light-color); /* Couleur du texte en fonction de la variable "light-color" */
+        border: none; /* Pas de bordure pour le bouton */
+        border-radius: 5px; /* Coins arrondis pour le bouton */
+        cursor: pointer; /* Change le curseur pour indiquer que le bouton est cliquable */
 
-        /* Effet au survol du bouton */
         &:hover {
-            background-color: #f39c12; /* Changer la couleur de fond au survol */
+            background-color: #f39c12; /* Change la couleur de fond du bouton au survol */
         }
     }
 }
 
-/* ----------------------------------------
-   FAQ Section Styling
----------------------------------------- */
-
-/* Style pour la section #faq */
 #faq {
-    margin-inline: 5px; /* Marge horizontale */
-    padding-inline: 20px; /* Padding horizontal */
-    padding-block: 10px; /* Padding vertical */
-    margin-bottom: 30px; /* Marge inférieure */
-    box-shadow: var(--border-shadow); /* Ombre autour de la section */
+    margin-inline: 5px; /* Marge de 5px à gauche et à droite */
+    padding-inline: 20px; /* Padding de 20px à gauche et à droite */
+    padding-block: 10px; /* Padding de 10px en haut et en bas */
+    margin-bottom: 30px; /* Marge de 30px en bas */
+    box-shadow: var(--border-shadow); /* Ombre portée autour du conteneur FAQ */
 
-    /* Style pour chaque élément FAQ */
     .faq-item {
-        margin-bottom: 15px; /* Espacement entre les éléments FAQ */
+        margin-bottom: 15px; /* Marge de 15px entre chaque item de la FAQ */
     }
 
     h2 {
-        margin-bottom: 10px; /* Marge inférieure du titre */
+        margin-bottom: 10px; /* Marge de 10px en bas du titre FAQ */
     }
 
-    /* Style pour les boutons de bascule de la FAQ */
     .faq-toggle {
-        background-color: var(--primary-color); /* Couleur de fond */
-        color: white; /* Couleur du texte */
-        border: none; /* Pas de bordure */
-        padding: 10px; /* Padding autour du texte */
-        width: 100%; /* Prendre toute la largeur */
-        text-align: left; /* Aligner le texte à gauche */
-        cursor: pointer; /* Curseur pointeur au survol */
-        font-size: 1.1rem; /* Taille du texte */
-
-        /* Effet au survol du bouton de la FAQ */
-        &:hover {
-            background-color: #f39c12; /* Changer la couleur de fond au survol */
-        }
+        background-color: var(--primary-color); /* Couleur de fond du bouton pour chaque question FAQ */
+        color: white; /* Couleur du texte du bouton en blanc */
+        border: none; /* Pas de bordure pour le bouton */
+        padding: 10px; /* Padding de 10px à l'intérieur du bouton */
+        width: 100%; /* Le bouton occupe toute la largeur de son conteneur */
+        text-align: left; /* Aligne le texte du bouton à gauche */
+        cursor: pointer; /* Change le curseur pour indiquer que le bouton est cliquable */
+        font-size: 1.1rem; /* Taille de la police du bouton à 1.1rem */
     }
 
-    /* Contenu caché de la FAQ */
+    .faq-toggle:hover {
+        background-color: #f39c12; /* Change la couleur du bouton au survol */
+    }
+
     .faq-content {
-        display: none; /* Masquer le contenu par défaut */
-        padding: 10px; /* Padding autour du contenu */
-        border-radius: 5px; /* Bordures arrondies */
+        display: none; /* Cache le contenu des réponses de la FAQ par défaut */
+        padding: 10px; /* Padding de 10px pour le contenu des réponses */
+        border-radius: 5px; /* Arrondit les coins du contenu des réponses */
     }
 
-    /* Style pour les paragraphes dans le contenu FAQ */
     .faq-content p {
-        font-size: 1rem; /* Taille du texte */
+        font-size: 1rem; /* Taille de la police du texte des réponses à 1rem */
     }
 }
 
-/* ----------------------------------------
-   Responsive Design for Medium Screens
----------------------------------------- */
-
-/* Ajouts spécifiques pour les écrans moyens */
 @media (min-width: 768px) {
-
-    /* Style pour la section #contact avec grille */
     #contact {
         form {
-            display: grid; /* Utiliser une grille pour la disposition */
-            grid-template-columns: 1fr 1fr; /* Deux colonnes égales */
+            display: grid; /* Utilisation d'une grille pour le formulaire sur les écrans plus larges */
+            grid-template-columns: 1fr 1fr; /* Deux colonnes égales pour le formulaire */
             
-            /* Élément "div" avant dernier et le bouton sont étendus sur toute la largeur */
             div:nth-last-of-type(2), button {
-                grid-column: 1 / -1; /* Étendre ces éléments sur toute la largeur de la grille */
+                grid-column: 1/-1; /* Le dernier div et le bouton occupent toute la largeur de la grille */
             }
 
-            /* Style pour le bouton */
             button {
-                width: 20vw; /* Largeur du bouton */
-                justify-self: center; /* Centrer le bouton horizontalement */
+                width: 20vw; /* Le bouton occupe 20% de la largeur de la fenêtre */
+                justify-self: center; /* Centre le bouton horizontalement dans la grille */
             }
 
-            /* Ajustement de la taille du textarea */
             textarea {
-                height: 10vh; /* Hauteur du textarea */
+                height: 10vh; /* Hauteur de la zone de texte à 10% de la hauteur de la fenêtre */
             }
         }
     }
 
-    /* Style pour la section FAQ avec grille */
     #faq {
-        display: grid; /* Utiliser une grille */
-        grid-template-columns: 1fr 1fr; /* Deux colonnes égales */
-        gap: 10px; /* Espacement entre les éléments */
+        display: grid; /* Utilisation d'une grille pour la FAQ */
+        grid-template-columns: 1fr 1fr; /* Deux colonnes égales pour les items de la FAQ */
+        gap: 10px; /* Espace de 10px entre les éléments de la grille */
         
         h2 {
-            grid-column: 1 / -1; /* Le titre prend toute la largeur de la grille */
+            grid-column: 1/-1; /* Le titre occupe toute la largeur de la grille */
         }
     }
 }
 
-/* ----------------------------------------
-   Responsive Design for Large Screens
----------------------------------------- */
-
-/* Ajustements pour les grands écrans */
 @media (min-width: 1024px) {
-    /* Ajuster la taille de police pour les grands écrans */
     :root {
-        font-size: 1.01rem; /* Augmenter légèrement la taille de la police */
+        font-size: 1.01rem; /* Augmente légèrement la taille de la police pour les écrans de plus de 1024px */
     }
 }
