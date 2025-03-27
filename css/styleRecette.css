@@ -391,7 +391,9 @@
 
     /* Suppression des images et légendes */
     #suggestion article figure {
+        img{
         display: none; /* Masquer les images dans la section suggestion */
+        }
     }
 
     /* Suppression des div et boutons */
@@ -429,113 +431,4 @@
     button {
         display: none; /* Masquer les boutons */
     }
-}
-/* ----------------------------------------
-   Mode Lecteur - Style d'affichage simplifié
----------------------------------------- */
-@media (prefers-reduced-motion: reduce) {
-    /* Style de la page en mode lecteur pour une expérience plus épurée */
-    body {
-        font-size: 16px; /* Taille de la police plus grande pour une lecture confortable */
-        line-height: 1.6; /* Hauteur de ligne plus espacée pour une meilleure lisibilité */
-        color: black; /* Texte noir pour un contraste élevé */
-        background-color: #f4f4f4; /* Fond clair pour ne pas fatiguer les yeux */
-        margin: 20px; /* Marges autour de la page */
-        padding: 0; /* Retirer les paddings généraux */
-    }
-
-    /* Masquer les éléments non essentiels comme les images et les boutons */
-    header, footer, .suggestion, button, .ads, .sidebar, .navigation {
-        display: none; /* Masquer les éléments non nécessaires */
-    }
-
-    /* Supprimer les images dans la section de la recette */
-    #infosGenerales figure, #suggestion figure {
-        display: none; /* Masquer les images */
-    }
-
-    /* Adapter la présentation du texte */
-    #infosGenerales, #listeIngr, #preparation, #suggestion {
-        margin: 0;
-        padding: 0;
-        box-shadow: none; /* Supprimer les ombres */
-        background-color: transparent; /* Enlever les fonds */
-    }
-
-    /* Réduire les bordures et marges */
-    h1, h2, h3 {
-        margin-bottom: 10px; /* Espacement réduit sous les titres */
-        color: #333; /* Couleur des titres */
-    }
-
-    p, li {
-        font-size: 1.2rem; /* Taille de la police augmentée pour le texte */
-        margin-bottom: 10px; /* Marge sous chaque paragraphe */
-    }
-
-    ul {
-        list-style-type: none; /* Supprimer les puces de liste */
-        padding-left: 0;
-    }
-
-    ol {
-        list-style-type: decimal; /* Numérotation des étapes */
-    }
-
-    /* Ajuster la présentation des sections de contenu */
-    #listeIngr ul, #preparation ol {
-        margin-left: 20px; /* Indentation pour les listes */
-    }
-
-    /* Adapter la largeur pour le mode lecture */
-    .container {
-        width: 100%; /* Maximiser la largeur de la zone de lecture */
-        padding: 0 20px; /* Padding horizontal */
-    }
-
-    /* Cacher les div avec des éléments comme des boutons ou autres distractions */
-    div {
-        display: block;
-        padding: 0;
-        margin: 0;
-    }
-
-    /* Ajuster les boutons en mode lecture */
-    button {
-        display: none; /* Masquer tous les boutons */
-    }
-
-    /* Enlever les ombres dans la section des suggestions */
-    #suggestion article {
-        box-shadow: none; /* Supprimer l'ombre autour des articles */
-        margin: 0;
-    }
-
-    /* Masquer le contenu en excès (par exemple les publicités) */
-    .ads, .sidebar, .navigation {
-        display: none; /* Masquer les éléments non nécessaires */
-    }
-}
-
-/* ----------------------------------------
-   Bouton Activer/Désactiver Mode Lecteur
----------------------------------------- */
-
-/* Style pour le bouton qui permet d'activer/désactiver le mode lecteur */
-#modeLecteurButton {
-    position: fixed; /* Positionnement fixe pour le bouton */
-    top: 20px;
-    right: 20px;
-    background-color: rgba(0, 0, 0, 0.5); /* Fond sombre avec transparence */
-    color: white; /* Texte en blanc */
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer; /* Pointeur au survol */
-    z-index: 1000; /* Positionner le bouton au-dessus du contenu */
-}
-
-#modeLecteurButton:hover {
-    background-color: rgba(0, 0, 0, 0.8); /* Fond plus sombre au survol */
 }
