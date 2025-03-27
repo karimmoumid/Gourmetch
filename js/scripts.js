@@ -1,3 +1,4 @@
+
 // Sélectionne tous les éléments checkbox pour filtrer les recettes
 const checkboxes = document.querySelectorAll('#filtre input[type="checkbox"]');
 

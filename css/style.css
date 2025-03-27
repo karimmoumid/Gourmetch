@@ -1,3 +1,6 @@
+
+
+
 #filtre {
     margin-inline: 5px; /* Marge horizontale */
     padding-inline: 20px; /* Padding horizontal */
@@ -46,6 +49,7 @@
     margin-bottom: 20px; /* Marge inférieure pour le conteneur de recettes */
 
     article {
+        animation: spin 1s ;
         position: relative; /* Positionner relativement l'article */
         margin-block: 20px; /* Marge verticale entre les articles */
         box-shadow: var(--border-shadow); /* Ombre autour de l'article */

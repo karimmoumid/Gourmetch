@@ -12,6 +12,7 @@
 
     /* Style pour les figures à l'intérieur de #infosGenerales */
     figure {
+        animation: spin 1s ;
         position: relative; /* Positionnement relatif pour permettre un placement absolu dans figcaption */
 
         /* Style de l'image dans la figure */

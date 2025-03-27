@@ -5,16 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GourmeTech</title>
+    <!-- Connexion aux polices Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+    <!-- Normalisation des styles CSS -->
     <link rel="stylesheet" href="css/normalize.css">
+    <!-- Styles personnalisés pour le header, footer, et la navigation -->
     <link rel="stylesheet" href="css/rootnavfooter.css">
+    <!-- Styles spécifiques à la page de recette -->
     <link rel="stylesheet" href="css/styleRecette.css">
+    <!-- Script pour la gestion de la navigation -->
     <script src="js/navscript.js" defer></script>
+    <!-- Script pour la gestion spécifique des recettes -->
     <script src="js/scriptrecette.js" defer></script>
 </head>
+
 <body>
     <header>
         <div>
@@ -26,6 +33,7 @@
             <h1>GourmeTech</h1>
         </div>
         <div>
+            <!-- Menu de navigation principal -->
             <nav role="navigation" id="nav-menu" class="nav-menu">
                 <ul>
                     <li><a href="index.html">Accueil</a></li>
@@ -33,13 +41,18 @@
                     <li><a href="a-propos.html">A propos</a></li>
                 </ul>
             </nav>
+            <!-- Icone pour changer de thème -->
             <div><img src="assets/icons/Vector (1).png" alt="icon pour changer de theme" role="button"></div>
+            <!-- Icone menu burger -->
             <img src="assets/icons/Vector (2).png" alt="icon burger" role="button">
         </div>
     </header>
+    
     <main>
+        <!-- Section principale pour les informations générales de la recette -->
         <section id="infosGenerales">
             <figure>
+                <!-- Image de la recette (Tagine) -->
                 <img src="assets/images/sour-moha-5t2SP3vQz28-unsplash.jpg" alt="Tagine">
                 <figcaption>TAGINE</figcaption>
             </figure>
@@ -50,11 +63,14 @@
                 <p><span>Temps :</span> 45min</p>
                 <p><span>Difficulté:</span> moyen</p>
                 <p><span>Nombre de personnes:</span> 4 personnes</p>
+                <!-- Bouton pour ajouter la recette aux favoris -->
                 <button data-id="2" data-diff="Moyen" data-temps="45min" data-categ="Plat" data-titre="Tagine"
                     data-imagesrc="assets/images/sour-moha-5t2SP3vQz28-unsplash.jpg" role="button">Ajouter aux
                     favoris</button>
             </div>
         </section>
+
+        <!-- Section avec la liste des ingrédients -->
         <section id="listeIngr">
             <h3>Liste des ingrédients :</h3>
             <ul>
@@ -75,8 +91,9 @@
                 <li>500 ml de bouillon de volaille</li>
                 <li>Sel et poivre au goût</li>
             </ul>
-            </ul>
         </section>
+
+        <!-- Section pour les étapes de préparation de la recette -->
         <section id="preparation">
             <h3>Étapes de préparation :</h3>
             <ol>
@@ -148,6 +165,8 @@
                 </li>
             </ol>
         </section>
+
+        <!-- Section avec des suggestions de recettes similaires -->
         <section id="suggestion">
             <h3>Autres suggestions :</h3>
             <div>
@@ -157,6 +176,7 @@
                         <figcaption>Tarte aux pommes</figcaption>
                     </figure>
                     <div>
+                        <!-- Bouton pour ajouter la recette aux favoris -->
                         <img src="assets/icons/mdi_heart (1).png" alt="icon de coeur pour rajouter aus favoris"
                             role="button" data-id="1" data-diff="Facile" data-temps="60min" data-categ="Dessert"
                             data-titre="Tarte aux pommes"
@@ -164,7 +184,7 @@
                     </div>
                     <div>
                         <p>Dessert</p>
-                        <p>6O min</p>
+                        <p>60 min</p>
                         <p>Facile</p>
                     </div>
                     <button role="button">Voir recette</button>
@@ -175,6 +195,7 @@
                         <figcaption>Couscous</figcaption>
                     </figure>
                     <div>
+                        <!-- Bouton pour ajouter la recette aux favoris -->
                         <img src="assets/icons/mdi_heart (1).png" alt="icon de coeur pour rajouter aus favoris"
                             role="button" data-id="3" data-diff="Difficile" data-temps="30min" data-categ="Entrée"
                             data-titre="Couscous" data-imagesrc="assets/images/louis-hansel-k2ZCm7LCj8E-unsplash.jpg">
@@ -190,6 +211,8 @@
         </section>
 
     </main>
+
+    <!-- Footer avec informations de copyright et navigation -->
     <footer>
         <div>
             <div>
@@ -200,6 +223,7 @@
                         <li><a href="favoris.html">Mes favoris</a></li>
                         <li><a href="a-propos.html">A propos</a></li>
                     </ul>
+                </nav>
             </div>
             <div>
                 <h3><a href="a-propos.html">A propos de GourmeTech</a></h3>
@@ -207,10 +231,10 @@
                     projet
                     pédagogique</p>
             </div>
-            </nav>
         </div>
         <p>©2025 GourmeTech - Tous droits réservés</p>
     </footer>
+
 </body>
 
 </html>

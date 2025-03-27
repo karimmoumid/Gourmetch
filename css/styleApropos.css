@@ -11,6 +11,7 @@
     }
 }
 #contact {
+    animation: spin 1s ;
     margin-inline: 5px; /* Marge de 5px sur les côtés (gauche et droite) */
     padding-inline: 20px; /* Padding de 20px à gauche et à droite */
     padding-block: 10px; /* Padding de 10px en haut et en bas */

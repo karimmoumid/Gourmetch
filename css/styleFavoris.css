@@ -12,6 +12,7 @@
 
     /* Style pour les articles à l'intérieur de #favorite */
     article {
+        animation: spin 1s ;
         position: relative; /* Positionnement relatif pour les éléments internes */
         margin-block: 10px; /* Marge verticale entre les articles */
         box-shadow: var(--border-shadow); /* Ombre autour des articles */
