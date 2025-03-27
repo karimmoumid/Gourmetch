@@ -23,5 +23,13 @@ localStorage.setItem("Liste des favorites", JSON.stringify(articlesListe))
 phrase();
 })
 
+if(article.titre ==="Tagine"){
+    let phrase = document.createElement("a");
+    phrase.setAttribute("href","recette.html");
+    phrase.textContent="Voir recette";
+    clone.querySelector("article button:first-of-type").textContent="";
+    clone.querySelector("article button:first-of-type").appendChild(phrase);
+}
+
     document.querySelector("#listefav").appendChild(clone);
 }

@@ -43,6 +43,7 @@ button{
             color: var(--light-color);
             color: var(--light-color);
             padding: 2px;
+            cursor: pointer;
 }
 }
 }
@@ -149,6 +150,7 @@ button{
             padding-block: 10px;
             margin-bottom: 10px;
             border-radius: 5px;
+        
         }
     }
 }
@@ -181,7 +183,8 @@ button{
 }
 #suggestion{
     div{
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     }
 }
 }
