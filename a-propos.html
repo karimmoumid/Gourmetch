@@ -2,21 +2,29 @@
 <html lang="fr">
 
 <head>
+    <!-- Définition du charset et de la viewport pour une meilleure compatibilité avec les appareils mobiles -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GourmeTech</title>
+
+    <!-- Connexion avec Google Fonts pour utiliser la police "Roboto" -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- Inclusion des fichiers CSS pour la mise en forme -->
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/rootnavfooter.css">
     <link rel="stylesheet" href="css/styleApropos.css">
+
+    <!-- Inclusion des scripts JavaScript pour la gestion des comportements interactifs -->
     <script src="js/scriptsapropos.js" defer></script>
     <script src="js/navscript.js" defer></script>
 </head>
 
 <body>
+
+    <!-- Début du header avec le logo et le menu de navigation -->
     <header>
         <div>
             <div>
@@ -27,6 +35,7 @@
             <h1>GourmeTech</h1>
         </div>
         <div>
+            <!-- Menu de navigation avec des liens vers différentes sections du site -->
             <nav role="navigation" id="nav-menu" class="nav-menu">
                 <ul>
                     <li><a href="index.html">Accueil</a></li>
@@ -34,22 +43,28 @@
                     <li><a href="a-propos.html">A propos</a></li>
                 </ul>
             </nav>
+            <!-- Icône pour changer de thème -->
             <div><img src="assets/icons/Vector (1).png" alt="icon pour changer de theme" role="button"></div>
+            <!-- Icône burger pour la navigation mobile -->
             <img src="assets/icons/Vector (2).png" alt="icon burger" role="button" id="burger">
         </div>
     </header>
+
+    <!-- Contenu principal de la page -->
     <main>
+
+        <!-- Section "À propos" présentant l'entreprise -->
         <section id="information">
             <h2>À propos de GourmeTech</h2>
-            <p>Bienvenue sur GourmeTech, la plateforme idéale pour découvrir des recettes de cuisine innovantes et
-                faciles à réaliser. Nous vous proposons une large sélection de recettes adaptées à tous les goûts et
-                toutes les occasions.</p>
-            <p>Notre objectif est de vous offrir une expérience culinaire enrichissante, en vous guidant pas à pas à
-                travers des recettes simples et savoureuses.</p>
+            <p>Bienvenue sur GourmeTech, la plateforme idéale pour découvrir des recettes de cuisine innovantes et faciles à réaliser. Nous vous proposons une large sélection de recettes adaptées à tous les goûts et toutes les occasions.</p>
+            <p>Notre objectif est de vous offrir une expérience culinaire enrichissante, en vous guidant pas à pas à travers des recettes simples et savoureuses.</p>
         </section>
+
+        <!-- Section "Contact" avec un formulaire pour envoyer un message -->
         <section id="contact">
             <h2>Contact</h2>
             <form id="contact-form">
+                <!-- Champ pour le nom de l'utilisateur -->
                 <div>
                     <label for="nickname">Nom :</label>
                     <input type="text" id="nickname" name="nickname" required aria-label="saisissez votre nom">
@@ -57,6 +72,8 @@
                         Votre Nom doit faire au moins 5 caractères
                     </div>
                 </div>
+
+                <!-- Champ pour l'email de l'utilisateur -->
                 <div>
                     <label for="email">Email :</label>
                     <input type="email" id="email" name="email" required aria-label="saisissez votre email">
@@ -64,6 +81,8 @@
                         Ceci n'est pas une adresse e-mail
                     </div>
                 </div>
+
+                <!-- Champ pour le message de l'utilisateur -->
                 <div>
                     <label for="message">Message :</label>
                     <textarea id="message" name="message" required aria-label="saisissez votre message"></textarea>
@@ -71,51 +90,56 @@
                         Votre message doit faire au moins 50 caractères
                     </div>
                 </div>
+
+                <!-- Case à cocher pour accepter la collecte des données personnelles -->
                 <div>
                     <input type="checkbox" name="rgpd" id="rgpd">
-                    <label for="rgpd">En cliquant sur le bouton "M'inscrire", j'accepte la collecte de mes données
-                        personnelles...</label>
+                    <label for="rgpd">En cliquant sur le bouton "M'inscrire", j'accepte la collecte de mes données personnelles...</label>
                     <div class="invalid-feedback">
                         La case doit être cochée
                     </div>
                 </div>
-                <button role="button" type="submit" id="submitbutton"
-                    aria-label="appuyer pour envoyer le formulaire">Envoyer</button>
+
+                <!-- Bouton pour soumettre le formulaire -->
+                <button role="button" type="submit" id="submitbutton" aria-label="appuyer pour envoyer le formulaire">Envoyer</button>
             </form>
         </section>
+
+        <!-- Section FAQ avec des questions fréquemment posées -->
         <section id="faq">
             <h2>Questions fréquemment posées (FAQ)</h2>
+
+            <!-- Premier élément de la FAQ -->
             <div class="faq-item">
-                <button class="faq-toggle" aria-expanded="false" data-id="faq1">Comment puis-je ajouter
-                    une recette ?</button>
+                <button class="faq-toggle" aria-expanded="false" data-id="faq1">Comment puis-je ajouter une recette ?</button>
                 <div class="faq-content" id="faq1" aria-hidden="true">
-                    <p>Pour ajouter une recette, vous devez vous inscrire ou vous connecter, puis vous pourrez soumettre
-                        votre propre recette via le formulaire d'ajout de recette.</p>
+                    <p>Pour ajouter une recette, vous devez vous inscrire ou vous connecter, puis vous pourrez soumettre votre propre recette via le formulaire d'ajout de recette.</p>
                 </div>
             </div>
 
+            <!-- Deuxième élément de la FAQ -->
             <div class="faq-item">
-                <button class="faq-toggle" aria-expanded="false" data-id="faq2">Quelles sont les
-                    catégories de recettes disponibles ?</button>
+                <button class="faq-toggle" aria-expanded="false" data-id="faq2">Quelles sont les catégories de recettes disponibles ?</button>
                 <div class="faq-content" id="faq2" aria-hidden="true">
-                    <p>Nous avons plusieurs catégories de recettes : Entrées, Plats, Desserts, ainsi que des recettes
-                        adaptées à des régimes spécifiques.</p>
+                    <p>Nous avons plusieurs catégories de recettes : Entrées, Plats, Desserts, ainsi que des recettes adaptées à des régimes spécifiques.</p>
                 </div>
             </div>
 
+            <!-- Troisième élément de la FAQ -->
             <div class="faq-item">
-                <button class="faq-toggle" aria-expanded="false" data-id="faq3">Puis-je modifier une
-                    recette après l'avoir soumise ?</button>
+                <button class="faq-toggle" aria-expanded="false" data-id="faq3">Puis-je modifier une recette après l'avoir soumise ?</button>
                 <div class="faq-content" id="faq3" aria-hidden="true">
-                    <p>Oui, une fois que vous avez soumis une recette, vous pouvez la modifier depuis votre profil
-                        utilisateur. Il suffit de vous connecter pour effectuer des modifications.</p>
+                    <p>Oui, une fois que vous avez soumis une recette, vous pouvez la modifier depuis votre profil utilisateur. Il suffit de vous connecter pour effectuer des modifications.</p>
                 </div>
             </div>
         </section>
     </main>
+
+    <!-- Pied de page avec des informations supplémentaires -->
     <footer>
         <div>
             <div>
+                <!-- Menu de navigation dans le footer -->
                 <nav role="navigation">
                     <h3>Navigation</h3>
                     <ul>
@@ -123,15 +147,15 @@
                         <li><a href="favoris.html">Mes favoris</a></li>
                         <li><a href="a-propos.html">A propos</a></li>
                     </ul>
+                </nav>
             </div>
             <div>
+                <!-- Section à propos dans le footer -->
                 <h3><a href="a-propos.html">A propos de GourmeTech</a></h3>
-                <p>GourmeTech est une plateforme de recettes culinaires interactive développée dans le cadre d'un
-                    projet
-                    pédagogique</p>
+                <p>GourmeTech est une plateforme de recettes culinaires interactive développée dans le cadre d'un projet pédagogique</p>
             </div>
-            </nav>
         </div>
+        <!-- Copyright du site -->
         <p>©2025 GourmeTech - Tous droits réservés</p>
     </footer>
 </body>

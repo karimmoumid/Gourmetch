@@ -2,21 +2,28 @@
 <html lang="fr">
 
 <head>
+    <!-- Définition du charset pour le bon affichage des caractères spéciaux et de la viewport pour les appareils mobiles -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GourmeTech</title>
+
+    <!-- Connexion aux ressources de Google Fonts pour la police "Roboto" -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- Inclusion des fichiers CSS pour normaliser le style et personnaliser les pages -->
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/rootnavfooter.css">
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Inclusion des scripts JavaScript nécessaires au bon fonctionnement des interactions -->
     <script src="js/navscript.js" defer></script>
     <script src="js/scripts.js" defer></script>
 </head>
 
 <body>
+    <!-- Début du header contenant le logo et le menu de navigation -->
     <header>
         <div>
             <div>
@@ -27,6 +34,7 @@
             <h1>GourmeTech</h1>
         </div>
         <div>
+            <!-- Menu de navigation avec des liens vers les différentes pages -->
             <nav role="navigation" id="nav-menu" class="nav-menu">
                 <ul>
                     <li><a href="index.html">Accueil</a></li>
@@ -34,79 +42,86 @@
                     <li><a href="a-propos.html">A propos</a></li>
                 </ul>
             </nav>
+            <!-- Icone pour changer le thème -->
             <div><img src="assets/icons/Vector (1).png" alt="icon pour changer de theme" role="button"></div>
+            <!-- Icone burger pour afficher un menu mobile -->
             <img src="assets/icons/Vector (2).png" alt="icon burger" role="button">
         </div>
     </header>
+
+    <!-- Section principale du contenu avec des options de filtrage et des recettes -->
     <main>
         <section id="filtre">
+            <!-- Formulaire pour la recherche de recettes -->
             <form action="">
                 <input type="text" placeholder="Rechercher une recette..." aria-label="Rechercher une recette">
                 <button>Rechercher</button>
             </form>
+
+            <!-- Filtrage par catégorie -->
             <article>
                 <h3>Catégorie</h3>
                 <ul>
-                    <li><input type="checkbox" name="entree" id="entree" aria-label="entrée"> <label
-                            for="entree">Entrée</label></li>
-                    <li><input type="checkbox" name="plat" id="plat"> <label for="plat" aria-label="plat">Plat</label>
-                    </li>
-                    <li><input type="checkbox" name="dessert" id="dessert" aria-label="dessert"> <label
-                            for="dessert">Dessert</label></li>
+                    <li><input type="checkbox" name="entree" id="entree" aria-label="entrée"> <label for="entree">Entrée</label></li>
+                    <li><input type="checkbox" name="plat" id="plat" aria-label="plat"> <label for="plat" aria-label="plat">Plat</label></li>
+                    <li><input type="checkbox" name="dessert" id="dessert" aria-label="dessert"> <label for="dessert">Dessert</label></li>
                 </ul>
             </article>
+
+            <!-- Filtrage par temps de préparation -->
             <article>
                 <h3>Temps</h3>
                 <ul>
-                    <li><input type="checkbox" name="rapide" id="rapide" aria-label="rapide"> <label
-                            for="rapide">Rapide</label></li>
-                    <li><input type="checkbox" name="moyen" id="moyen" aria-label="moyen"> <label
-                            for="moyen">Moyen</label></li>
-                    <li><input type="checkbox" name="long" id="long"> <label for="long" aria-label="long">Long</label>
-                    </li>
+                    <li><input type="checkbox" name="rapide" id="rapide" aria-label="rapide"> <label for="rapide">Rapide</label></li>
+                    <li><input type="checkbox" name="moyen" id="moyen" aria-label="moyen"> <label for="moyen">Moyen</label></li>
+                    <li><input type="checkbox" name="long" id="long"> <label for="long" aria-label="long">Long</label></li>
                 </ul>
             </article>
+
+            <!-- Filtrage par niveau de difficulté -->
             <article>
                 <h3>Difficulté</h3>
                 <ul>
-                    <li><input type="checkbox" name="facile" id="facile" aria-label="facile"> <label
-                            for="facile">Facile</label></li>
-                    <li><input type="checkbox" name="dmoyen" id="dmoyen"> <label for="dmoyen"
-                            aria-label="moyen">Moyen</label></li>
-                    <li><input type="checkbox" name="difficile" id="difficile" aria-label="difficile"> <label
-                            for="difficile">Difficile</label>
-                    </li>
+                    <li><input type="checkbox" name="facile" id="facile" aria-label="facile"> <label for="facile">Facile</label></li>
+                    <li><input type="checkbox" name="dmoyen" id="dmoyen"> <label for="dmoyen" aria-label="moyen">Moyen</label></li>
+                    <li><input type="checkbox" name="difficile" id="difficile" aria-label="difficile"> <label for="difficile">Difficile</label></li>
                 </ul>
             </article>
         </section>
+
+        <!-- Section avec les recettes filtrées -->
         <section id="recette">
+            <!-- Recette 1 : Tarte aux pommes -->
             <article data-diff="facile" data-temps="long" data-categ="dessert">
                 <figure>
                     <img src="assets/images/diliara-garifullina-D7X-GMeTV7U-unsplash.jpg" alt="tarte aux pommes">
                     <figcaption>Tarte aux pommes</figcaption>
                 </figure>
                 <div>
-                    <img src="assets/icons/mdi_heart (1).png" alt="icon de coeur pour rajouter aus favoris"
-                        role="button" data-id="1" data-diff="Facile" data-temps="60min" data-categ="Dessert"
-                        data-titre="Tarte aux pommes"
-                        data-imagesrc="assets/images/diliara-garifullina-D7X-GMeTV7U-unsplash.jpg">
+                    <!-- Icône cœur pour ajouter aux favoris -->
+                    <img src="assets/icons/mdi_heart (1).png" alt="icon de coeur pour rajouter aus favoris" role="button"
+                         data-id="1" data-diff="Facile" data-temps="60min" data-categ="Dessert" data-titre="Tarte aux pommes"
+                         data-imagesrc="assets/images/diliara-garifullina-D7X-GMeTV7U-unsplash.jpg">
                 </div>
                 <div>
                     <p>Dessert</p>
-                    <p>6O min</p>
+                    <p>60 min</p>
                     <p>Facile</p>
                 </div>
                 <button role="button">Voir recette</button>
             </article>
+
+            <!-- Recette 2 : Tagine -->
             <article data-diff="dmoyen" data-temps="moyen" data-categ="plat">
                 <figure>
                     <img src="assets/images/sour-moha-5t2SP3vQz28-unsplash.jpg" alt="tagine">
                     <figcaption>Tagine</figcaption>
                 </figure>
                 <div>
-                    <img src="assets/icons/mdi_heart (1).png" alt="icon de coeur pour rajouter aus favoris"
-                        role="button" data-id="2" data-diff="Moyen" data-temps="45min" data-categ="Plat"
-                        data-titre="Tagine" data-imagesrc="assets/images/sour-moha-5t2SP3vQz28-unsplash.jpg">
+                    <!-- Icône cœur pour ajouter aux favoris -->
+                    <img src="assets/icons/mdi_heart (1).png" alt="icon de coeur pour rajouter aus favoris" role="button"
+                         data-id="2" data-diff="Moyen" data-temps="45min" data-categ="Plat" data-titre="Tagine"
+                         data-imagesrc="assets/images/sour-moha-5t2SP3vQz28-unsplash.jpg">
                 </div>
                 <div>
                     <p>Plat</p>
@@ -115,15 +130,18 @@
                 </div>
                 <button role="button"><a href="recette.html">Voir recette</a></button>
             </article>
+
+            <!-- Recette 3 : Couscous -->
             <article data-diff="difficile" data-temps="rapide" data-categ="entree">
                 <figure>
                     <img src="assets/images/louis-hansel-k2ZCm7LCj8E-unsplash.jpg" alt="Couscous">
                     <figcaption>Couscous</figcaption>
                 </figure>
                 <div>
-                    <img src="assets/icons/mdi_heart (1).png" alt="icon de coeur pour rajouter aus favoris"
-                        role="button" data-id="3" data-diff="Difficile" data-temps="30min" data-categ="Entrée"
-                        data-titre="Couscous" data-imagesrc="assets/images/louis-hansel-k2ZCm7LCj8E-unsplash.jpg">
+                    <!-- Icône cœur pour ajouter aux favoris -->
+                    <img src="assets/icons/mdi_heart (1).png" alt="icon de coeur pour rajouter aus favoris" role="button"
+                         data-id="3" data-diff="Difficile" data-temps="30min" data-categ="Entrée" data-titre="Couscous"
+                         data-imagesrc="assets/images/louis-hansel-k2ZCm7LCj8E-unsplash.jpg">
                 </div>
                 <div>
                     <p>Entrée</p>
@@ -134,28 +152,30 @@
             </article>
         </section>
     </main>
+
+    <!-- Pied de page avec informations de navigation et copyright -->
     <footer>
         <div>
             <div>
+                <!-- Navigation du footer -->
                 <nav role="navigation">
                     <h3>Navigation</h3>
                     <ul>
-                        <ul>
-                            <li><a href="index.html">Accueil</a></li>
-                            <li><a href="favoris.html">Mes favoris</a></li>
-                            <li><a href="a-propos.html">A propos</a></li>
-                        </ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="favoris.html">Mes favoris</a></li>
+                        <li><a href="a-propos.html">A propos</a></li>
+                    </ul>
+                </nav>
             </div>
             <div>
+                <!-- À propos de GourmeTech -->
                 <h3><a href="a-propos.html">A propos de GourmeTech</a></h3>
-                <p>GourmeTech est une plateforme de recettes culinaires interactive développée dans le cadre d'un
-                    projet
-                    pédagogique</p>
+                <p>GourmeTech est une plateforme de recettes culinaires interactive développée dans le cadre d'un projet pédagogique</p>
             </div>
-            </nav>
         </div>
         <p>©2025 GourmeTech - Tous droits réservés</p>
     </footer>
+
 </body>
 
 </html>

@@ -2,21 +2,28 @@
 <html lang="fr">
 
 <head>
+    <!-- Définition du charset et de la viewport pour la compatibilité avec les appareils mobiles -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GourmeTech</title>
+
+    <!-- Connexion avec Google Fonts pour utiliser la police "Roboto" -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- Inclusion des fichiers CSS pour la mise en forme -->
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/rootnavfooter.css">
     <link rel="stylesheet" href="css/styleFavoris.css">
+
+    <!-- Inclusion des scripts JavaScript pour les fonctionnalités interactives -->
     <script src="js/navscript.js" defer></script>
     <script src="js/scriptsfav.js" defer></script>
 </head>
 
 <body>
+    <!-- Début du header avec le logo et le menu de navigation -->
     <header>
         <div>
             <div>
@@ -27,6 +34,7 @@
             <h1>GourmeTech</h1>
         </div>
         <div>
+            <!-- Menu de navigation avec des liens vers différentes sections du site -->
             <nav role="navigation" id="nav-menu" class="nav-menu">
                 <ul>
                     <li><a href="index.html">Accueil</a></li>
@@ -34,21 +42,30 @@
                     <li><a href="a-propos.html">A propos</a></li>
                 </ul>
             </nav>
+            <!-- Icône pour changer de thème -->
             <div><img src="assets/icons/Vector (1).png" alt="icon pour changer de theme" role="button"></div>
+            <!-- Icône burger pour la navigation mobile -->
             <img src="assets/icons/Vector (2).png" alt="icon burger" role="button">
         </div>
     </header>
+
+    <!-- Contenu principal de la page -->
     <main>
+        <!-- Section affichant les favoris de l'utilisateur -->
         <section id="favorite">
             <h2>Mes favorites :</h2>
+            <!-- Conteneur pour afficher la liste des articles favoris -->
             <div id="listefav">
 
             </div>
         </section>
     </main>
+
+    <!-- Pied de page avec des informations supplémentaires -->
     <footer>
         <div>
             <div>
+                <!-- Menu de navigation dans le footer -->
                 <nav role="navigation">
                     <h3>Navigation</h3>
                     <ul>
@@ -56,32 +73,42 @@
                         <li><a href="favoris.html">Mes favoris</a></li>
                         <li><a href="a-propos.html">A propos</a></li>
                     </ul>
+                </nav>
             </div>
             <div>
+                <!-- Section à propos dans le footer -->
                 <h3><a href="a-propos.html">A propos de GourmeTech</a></h3>
-                <p>GourmeTech est une plateforme de recettes culinaires interactive développée dans le cadre d'un
-                    projet
-                    pédagogique</p>
+                <p>GourmeTech est une plateforme de recettes culinaires interactive développée dans le cadre d'un projet pédagogique</p>
             </div>
-            </nav>
         </div>
+        <!-- Copyright du site -->
         <p>©2025 GourmeTech - Tous droits réservés</p>
     </footer>
+
+    <!-- Template pour les articles favoris (sera utilisé pour dupliquer les éléments dans le JavaScript) -->
     <template id="fav">
         <article>
             <figure>
+                <!-- Image de l'article -->
                 <img src="" alt="">
+                <!-- Titre de l'article -->
                 <figcaption></figcaption>
             </figure>
             <div>
+                <!-- Catégorie de l'article -->
                 <p></p>
+                <!-- Temps de préparation de l'article -->
                 <p></p>
+                <!-- Difficulté de l'article -->
                 <p></p>
             </div>
+            <!-- Bouton pour voir la recette -->
             <button role="button">Voir recette</button>
+            <!-- Bouton pour supprimer l'article des favoris -->
             <button role="button">Suprimer</button>
         </article>
     </template>
+
 </body>
 
 </html>
